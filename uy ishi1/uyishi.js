@@ -13,22 +13,34 @@ if (ball >= 60 && davomat >= 70) {
 }
 
 
+// string
+var a = "string"; 
 
-var a = "string";
 
+
+// boolean
 var isHareCar = false;
 
+
+// number
 var b = 10;
 
+
+// bigint
 var  biggerINter = 8709478092347893478943789347893028475937495783490572394758934759837459837458973894n;
 
+
+// null
 var p = null;
 
+
+// symbol
 var sy = Symbol("fhuwef")
+
 
 console.log("a, isHareCar, b, biggerINter, p, sy,");
 
-
+// object
 var Asadbek = {
     name: "Asadbek",
     age: 13,
@@ -39,6 +51,8 @@ var Asadbek = {
 
 console.log("Asadbek");
 
+
+// array
 var array = [
     "asadbek",
     13,
@@ -46,5 +60,7 @@ var array = [
     true,
     30,
 ]
+
+// undifined
 
 console.log(array);
