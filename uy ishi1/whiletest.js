@@ -1,99 +1,99 @@
-var a = prompt("Oyingizni ayting!");
+// var a = prompt("Oyingizni ayting!");
 
-switch (a) {
-  case "1":
-    console.log("yanvar");
+// switch (a) {
+//   case "1":
+//     console.log("yanvar");
 
-    break;
+//     break;
 
-  case "yanvar":
-    console.log("1");
+//   case "yanvar":
+//     console.log("1");
 
-  case "2":
-    console.log("fevral");
+//   case "2":
+//     console.log("fevral");
 
-    break;
+//     break;
 
-  case "fevral":
-    console.log("2");
+//   case "fevral":
+//     console.log("2");
 
-  case "3":
-    console.log("mart");
+//   case "3":
+//     console.log("mart");
 
-    break;
+//     break;
 
-  case "mart":
-    console.log("3");
+//   case "mart":
+//     console.log("3");
 
-  case "4":
-    console.log("aprel");
+//   case "4":
+//     console.log("aprel");
 
-    break;
+//     break;
 
-  case "aprel":
-    console.log("4");
+//   case "aprel":
+//     console.log("4");
 
-  case "5":
-    console.log("may");
+//   case "5":
+//     console.log("may");
 
-    break;
+//     break;
 
-  case "may":
-    console.log("5");
+//   case "may":
+//     console.log("5");
 
-  case "6":
-    console.log("iyul");
+//   case "6":
+//     console.log("iyul");
 
-    break;
+//     break;
 
-  case "iyul":
-    console.log("6");
+//   case "iyul":
+//     console.log("6");
 
-  case "7":
-    console.log("iyun");
+//   case "7":
+//     console.log("iyun");
 
-    break;
+//     break;
 
-  case "iyun":
-    console.log("7");
+//   case "iyun":
+//     console.log("7");
 
-  case "8":
-    console.log("avgust");
+//   case "8":
+//     console.log("avgust");
 
-    break;
+//     break;
 
-  case "avgust":
-    console.log("8");
+//   case "avgust":
+//     console.log("8");
 
-  case "9":
-    console.log("sentyabr");
+//   case "9":
+//     console.log("sentyabr");
 
-    break;
+//     break;
 
-  case "sentyabr":
-    console.log("9");
+//   case "sentyabr":
+//     console.log("9");
 
-  case "10":
-    console.log("oktyabr");
+//   case "10":
+//     console.log("oktyabr");
 
-    break;
+//     break;
 
-  case "oktyabr":
-    console.log("10");
+//   case "oktyabr":
+//     console.log("10");
 
-  case "11":
-    console.log("noyabr");
+//   case "11":
+//     console.log("noyabr");
 
-    break;
+//     break;
 
-  case "noyabr":
-    console.log("11");
+//   case "noyabr":
+//     console.log("11");
 
-  case "12":
-    console.log("dekabr");
+//   case "12":
+//     console.log("dekabr");
 
-    break;
+//     break;
 
-  case "dekabr":
-    console.log("12");
-}
+//   case "dekabr":
+//     console.log("12");
+// }
