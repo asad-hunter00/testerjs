@@ -1,18 +1,23 @@
-var number1 = prompt("hohlagan soningizni kirgazing")
-var number2 = prompt("hohlagan ikkinchi soningizni qo'shing")
-var operation = prompt("enter operation");
+let var1 = +prompt("Birinchi sonni kiriting");
+let var2 = +prompt("Ikkinchi sonni kiriting");
+let op = prompt("Amalni kiriting: +, -, *, /");
+let result;
 
-
-// console.log(number1, number2, operation)
-
-switch (operation) {
-    case "+":
-        console.log(number1 + number2);
-
-        
-        break;
-
-    default:
-        break;
+switch (op) {
+  case "+":
+    result = var1 + var2;
+    break;
+  case "-":
+    result = var1 - var2;
+    break;
+  case "*":
+    result = var1 * var2;
+    break;
+  case "/":
+    result = var1 / var2;
+    break;
+  default:
+    result = "Noto'g'ri amal"; // Added quotes around the error message
 }
 
+console.log(result);
