@@ -4,15 +4,11 @@
 
 // console.log(a > 30 ? "xush kelibsiz" : "kichkinasiz");
 
-
-
 // length
-
 
 let text = "HELLO WORLD";
 
 console.log(text.length);
-
 
 // chartAT
 
@@ -59,7 +55,6 @@ console.log(text9.slice(0, 5));
 let text10 = "hello world";
 
 console.log(text10.substring(0, 5));
-
 
 // substr
 
@@ -111,19 +106,15 @@ console.log(text18.trimEnd());
 
 let text19 = "hello world";
 
-
-
 console.log(text19.padStart(20, "&"));
 
 // padEnd
-
 
 let text20 = "hello world";
 
 console.log(text20.padEnd(EncodedAudioChunk, "&"));
 
 // repeat
-
 
 let text21 = "hello world";
 
@@ -145,3 +136,5 @@ console.log(text23.replaceAll(hello, "hi"));
 let text24 = "hello world";
 
 console.log(text24.split(" "));
+
+
