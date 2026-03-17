@@ -8,4 +8,4 @@
 
 // }
 
-// console.log("object", object)
+// console.log("object", object);
