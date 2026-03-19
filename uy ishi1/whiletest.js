@@ -1,9 +1,22 @@
+<<<<<<< HEAD
+// let i = 0;
+=======
 // var a = prompt("Oyingizni ayting!");
+>>>>>>> a0da79e06de565892fdaf299f78e244254dd95f2
 
 // switch (a) {
 //   case "1":
 //     console.log("yanvar");
 
+<<<<<<< HEAD
+// while (i <= 100) {
+//     if (i % 2 == 0) {
+//         console.log(i)
+//     }
+
+//     i++;
+// }
+=======
 //     break;
 
 //   case "yanvar":
@@ -97,3 +110,4 @@
 //   case "dekabr":
 //     console.log("12");
 // }
+>>>>>>> a0da79e06de565892fdaf299f78e244254dd95f2
