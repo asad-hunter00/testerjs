@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // function calc() {
 //   let str = prompt("misol kirgazing");
 
@@ -25,7 +25,7 @@
 //   }
 // }
 // calc();
-=======
+
 function calc() {
     let str = prompt("misol kirgazing")
 
@@ -52,5 +52,4 @@ function calc() {
         console.log("sondan keyin joy tashlang")
     }
 }
-calc()
->>>>>>> 71ddea7a79010eab7c5a7f5475c507db279589f5
+calc();
