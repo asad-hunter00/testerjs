@@ -232,7 +232,7 @@
 // ];
 
 // a.sort(function (a, b) {
-//   var x = a.email.toLowerCase();                                                                                                                          
+//   var x = a.email.toLowerCase();
 //   var y = b.email.toLowerCase();
 
 //   if (x < y) {
@@ -248,24 +248,15 @@
 
 // console.log(a)
 
+// var user = new Date("11-05-2012");
 
+// var day = user.getDay();
 
+// var min = day / ;
 
+// var min
 
-var user = new Date("11-05-2012");
-
-
-
-
-var day = user.getDay();
-
-var min = day / ;
-
-
-
-console.log()
-
-
+// console.log()
 
 // var ms = d.getDay();
 
@@ -283,6 +274,33 @@ console.log()
 
 // var n = d.getTime();
 
-// var c = d.getUTCHours 
+// var c = d.getUTCHours
 // var z = d.getUTCSeconds
 // console.log(d);
+
+// setInterval(function () {
+//     let birth = new Date("2012-05-11");
+//     let now = new Date();
+
+//     let diff = now - birth
+
+//     let hour = Math.floor(diff / (1000 * 60 * 60));
+//     let day = Math.floor(hour / 24);
+//     let year = Math.floor(day / 365);
+
+//     console.log(year + " yil, " + day + " kun, " + (hour % 24) + " soat");
+// }, 1000);
+
+let num = prompt("1 dan 7 gacha son kiriting");
+
+let days = [
+  "Dushanba",
+  "Seshanba",
+  "Chorshanba",
+  "Payshanba",
+  "Juma",
+  "Shanba",
+  "Yakshanba",
+];
+
+console.log(days[num - 1]);
