@@ -259,7 +259,7 @@ var user = new Date("11-05-2012");
 
 var day = user.getDay();
 
-var min
+var min = day / ;
 
 
 
