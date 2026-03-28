@@ -278,29 +278,58 @@
 // var z = d.getUTCSeconds
 // console.log(d);
 
-// setInterval(function () {
-//     let birth = new Date("2012-05-11");
-//     let now = new Date();
+// let num = prompt("1 dan 7 son kirigizing");
 
-//     let diff = now - birth
+// let days = [
+//   "Dushanba",
+//   "Seshanba",
+//   "Chorshanba",
+//   "Payshanba",
+//   "Juma",
+//   "Shanba",
+//   "Yakshanba",
+// ];
 
-//     let hour = Math.floor(diff / (1000 * 60 * 60));
-//     let day = Math.floor(hour / 24);
-//     let year = Math.floor(day / 365);
+// console.log(days[num - 1]);
 
-//     console.log(year + " yil, " + day + " kun, " + (hour % 24) + " soat");
-// }, 1000);
+// console.log(Math.floor(38.7));
+// console.log(Math.floor(40.230984));
 
-let num = prompt("1 dan 7 gacha son kiriting");
+// console.log(Math.round(57.5));
+// console.log(Math.round(36.1));
 
-let days = [
-  "Dushanba",
-  "Seshanba",
-  "Chorshanba",
-  "Payshanba",
-  "Juma",
-  "Shanba",
-  "Yakshanba",
-];
+// console.log(Math.ceil(34.4));
+// console.log(Math.ceil(34.9));
 
-console.log(days[num - 1]);
+// console.log(Math.trunc(5.6));
+// console.log(Math.trunc(98.8));
+
+// console.log(Math.sign(45));
+// console.log(Math.sign(-45));
+
+// console.log(Math.pow(7, 2))
+// console.log(Math.pow(8, 2))
+
+// console.log(Math.sqrt(64))
+// console.log(Math.trunc(Math.sqrt(54)));
+
+// console.log(Math.abs(-4.7))
+// console.log(Math.abs(7.1))
+
+
+
+// console.log(Math.min(324, 234, 234, 342, 244, 23, 34, 234, 234, 234))
+// console.log(Math.max(234, 234, 56, 123, 89, 234234, ))
+
+// console.log(Math.random() * 10)
+
+
+var arr = ["bmw", "mercedez", "audio", "volvo", "porsche", "pagani"];
+
+
+var randomCars = Math.trunc(Math.random() * arr.length);
+
+console.log(arr[randomCars])
+
+
+
