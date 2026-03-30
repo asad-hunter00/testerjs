@@ -324,12 +324,63 @@
 // console.log(Math.random() * 10)
 
 
-var arr = ["bmw", "mercedez", "audio", "volvo", "porsche", "pagani"];
+// var arr = ["bmw", "mercedez", "audio", "volvo", "porsche", "pagani"];
 
 
-var randomCars = Math.trunc(Math.random() * arr.length);
+// var randomCars = Math.trunc(Math.random() * arr.length);
 
-console.log(arr[randomCars])
+// console.log(arr[randomCars])
+
+
+
+
+// tosh qaychi qog'oz oyini
+
+let userch = prompt("tosh qaychi qogoz tanlang va yozing");
+
+let math = Math.random();
+let komp;
+
+
+// komp if else
+
+
+
+if (math < 0.34) {
+    komp = "tosh";
+    console.log("tosh. Komp");
+}
+ else if (math < 0.67) {
+    komp = "qaychi";
+    console.log("qaychi. Komp");
+} else {
+    komp = "qogoz";
+    console.log("qogoz. Komp");
+}
+
+// user if else
+if (userch == "tosh") {
+    console.log("tosh. User");
+} else if (userch == "qogoz" ) {
+    console.log("qogoz. User");
+} else {
+    console.log("qaychi. User")
+}
+
+
+if (userch == komp) {
+    console.log("Durrang");
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
