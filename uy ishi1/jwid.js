@@ -324,12 +324,19 @@
 // console.log(Math.random() * 10)
 
 
-var arr = ["bmw", "mercedez", "audio", "volvo", "porsche", "pagani"];
+var arr = +prompt("mini game Son kirgazing 10 dan 1 gacha");
+var num = Math.trunc(Math.random() * 10);
+
+if (arr === "num") {
+    console.log("siz yutdingiz");
+}  else if (arr == "num") {
+    
+}
+
+console.log()
 
 
-var randomCars = Math.trunc(Math.random() * arr.length);
 
-console.log(arr[randomCars])
 
 
 
