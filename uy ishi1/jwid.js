@@ -292,85 +292,97 @@
 
 // console.log(days[num - 1]);
 
-// console.log(Math.floor(38.7));
-// console.log(Math.floor(40.230984));
+console.log(Math.floor(38.7));
+console.log(Math.floor(40.230984));
 
-// console.log(Math.round(57.5));
-// console.log(Math.round(36.1));
+console.log(Math.round(57.3));
+console.log(Math.round(36.1));
 
-// console.log(Math.ceil(34.4));
-// console.log(Math.ceil(34.9));
+console.log(Math.ceil(34.1));
+console.log(Math.ceil(34.9));
 
-// console.log(Math.trunc(5.6));
-// console.log(Math.trunc(98.8));
+console.log(Math.trunc(5.6));
+console.log(Math.trunc(98.8));
 
-// console.log(Math.sign(45));
-// console.log(Math.sign(-45));
+console.log(Math.sign(45));
+console.log(Math.sign(-45));
 
-// console.log(Math.pow(7, 2))
-// console.log(Math.pow(8, 2))
+console.log(Math.pow(7, 2))
+console.log(Math.pow(8, 2))
 
-// console.log(Math.sqrt(64))
-// console.log(Math.trunc(Math.sqrt(54)));
+console.log(Math.sqrt(64))
+console.log(Math.trunc(Math.sqrt(54)));
 
-// console.log(Math.abs(-4.7))
-// console.log(Math.abs(7.1))
-
-
-
-// console.log(Math.min(324, 234, 234, 342, 244, 23, 34, 234, 234, 234))
-// console.log(Math.max(234, 234, 56, 123, 89, 234234, ))
-
-// console.log(Math.random() * 10)
+console.log(Math.abs(-4.7))
+console.log(Math.abs(7.1))
 
 
-// var arr = ["bmw", "mercedez", "audio", "volvo", "porsche", "pagani"];
+
+console.log(Math.min(324, 234, 234, 342, 244, 23, 34, 234, 234, 234))
+console.log(Math.max(234, 234, 56, 123, 89, 234234, ))
+
+console.log(Math.random() * 10)
 
 
-// var randomCars = Math.trunc(Math.random() * arr.length);
+var arr = ["bmw", "mercedez", "audio", "volvo", "porsche", "pagani"];
 
-// console.log(arr[randomCars])
+
+var randomCars = Math.trunc(Math.random() * arr.length);
+
+console.log(arr[randomCars])
+
+
+
+// Xulosa (eng muhimlari):
+// floor → pastga
+// ceil → yuqoriga
+// round → oddiy yaxlitlash
+// trunc → kesadi
+// random → tasodifiy
+// pow → daraja
+// sqrt → ildiz
+
 
 
 
 
 // tosh qaychi qog'oz oyini
 
-let userch = prompt("tosh qaychi qogoz tanlang va yozing");
+// let userch = prompt("tosh qaychi qogoz tanlang va yozing");
 
-let math = Math.random();
-let komp;
-
-
-// komp if else
+// let math = Math.random();
+// let komp;
 
 
-
-if (math < 0.34) {
-    komp = "tosh";
-    console.log("tosh. Komp");
-}
- else if (math < 0.67) {
-    komp = "qaychi";
-    console.log("qaychi. Komp");
-} else {
-    komp = "qogoz";
-    console.log("qogoz. Komp");
-}
-
-// user if else
-if (userch == "tosh") {
-    console.log("tosh. User");
-} else if (userch == "qogoz" ) {
-    console.log("qogoz. User");
-} else {
-    console.log("qaychi. User")
-}
+// // komp if else
 
 
-if (userch == komp) {
-    console.log("Durrang");
-}
+
+// if (math < 0.34) {
+//     komp = "tosh";
+//     console.log("tosh. Komp");
+// }
+//  else if (math < 0.67) {
+//     komp = "qaychi";
+//     console.log("qaychi. Komp");
+// } else {
+//     komp = "qogoz";
+//     console.log("qogoz. Komp");
+// }
+
+// // user if else
+// if (userch == "tosh") {
+//     console.log("tosh. User");
+// } else if (userch == "qogoz" ) {
+//     console.log("qogoz. User");
+// } else {
+//     console.log("qaychi. User")
+// }
+
+
+// if (userch == komp) {
+//     console.log("Durrang");
+
 
 
 
