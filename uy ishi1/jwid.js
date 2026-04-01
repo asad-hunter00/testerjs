@@ -292,48 +292,48 @@
 
 // console.log(days[num - 1]);
 
-console.log(Math.floor(38.7));
-console.log(Math.floor(40.230984));
+// console.log(Math.floor(38.7));
+// console.log(Math.floor(40.230984));
 
-console.log(Math.round(57.3));
-console.log(Math.round(36.1));
+// console.log(Math.round(57.3));
+// console.log(Math.round(36.1));
 
-console.log(Math.ceil(34.1));
-console.log(Math.ceil(34.9));
+// console.log(Math.ceil(34.1));
+// console.log(Math.ceil(34.9));
 
-console.log(Math.trunc(5.6));
-console.log(Math.trunc(98.8));
+// console.log(Math.trunc(5.6));
+// console.log(Math.trunc(98.8));
 
-console.log(Math.sign(45));
-console.log(Math.sign(-45));
+// console.log(Math.sign(45));
+// console.log(Math.sign(-45));
 
-console.log(Math.pow(7, 2))
-console.log(Math.pow(8, 2))
+// console.log(Math.pow(7, 2))
+// console.log(Math.pow(8, 2))
 
-console.log(Math.sqrt(64))
-console.log(Math.trunc(Math.sqrt(54)));
+// console.log(Math.sqrt(64))
+// console.log(Math.trunc(Math.sqrt(54)));
 
-console.log(Math.abs(-4.7))
-console.log(Math.abs(7.1))
-
-
-
-console.log(Math.min(324, 234, 234, 342, 244, 23, 34, 234, 234, 234))
-console.log(Math.max(234, 234, 56, 123, 89, 234234, ))
-
-console.log(Math.random() * 10)
+// console.log(Math.abs(-4.7))
+// console.log(Math.abs(7.1))
 
 
-var arr = +prompt("mini game Son kirgazing 10 dan 1 gacha");
-var num = Math.trunc(Math.random() * 10);
 
-if (arr === "num") {
-    console.log("siz yutdingiz");
-}  else if (arr == "num") {
+// console.log(Math.min(324, 234, 234, 342, 244, 23, 34, 234, 234, 234))
+// console.log(Math.max(234, 234, 56, 123, 89, 234234, ))
+
+// console.log(Math.random() * 10)
+
+
+// var arr = +prompt("mini game Son kirgazing 10 dan 1 gacha");
+// var num = Math.trunc(Math.random() * 10);
+
+// if (arr === "num") {
+//     console.log("siz yutdingiz");
+// }  else if (arr == "num") {
     
-}
+// }
 
-console.log()
+// console.log()
 
 
 
