@@ -79,17 +79,10 @@
 
 // console.log(f2())
 
-
-
-
-
-
 // var son = {
 //   name: "Saloh",
 //   age: 13,
 // };
-
-
 
 // var son2 = son;
 
@@ -97,97 +90,29 @@
 
 // console.log(son);
 
-
-
 // const Arr = ["Bmw", "Porsche", "Supra,"];
 // let add = prompt("Bir mashina Nomini yozing");
 
-
-
-
 // console.log(Arr + add)
-
-
-
-
-
-
 
 // var myHobby = "Code";
 // var myHobby = "scinence";
 // myHobby = "Javascript";
 
-
 // let cars = "Porsche";
 // cars =  "Bmw";
-
 
 // const math = "Information";
 // math = "Foundation";
 
+// let numbers = [24, 234, , 4234, 45, 1, 3, 45];
 
-// every
+// numbers.forEach(myFunction);
 
+// function myFunction(value) {
+//     console.log(numbers);
+// }
 
-[2, 4, 6].every(num => num % 2 === 0)
-
-
-
-[1, 2, 3].every(num => num > 0)
-
-
-[1, -2, 3].every(num => num > 0)
-
-
-
-
-
-// some
-[1, 2, 3].some(num => num > 2)
-
-
-[-1, -2, -3].some(num => num > 0)
-
-[5, 10, 15].some(num => num === 10)
-
-
-// from
-
-Array.from(new Set([1, 2, 2, 1, 4, 3]));
-
-Array.from({length: 3})
-
-
-Array.from("abc")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// “Reference type mutable, lekin agar biz uni qayta yangi qiymatga tenglasak — bu mutation emas, bu reassignment”
-
-// **“bugun o‘tadigan mavzumiz — mutable va immutable.
-// Bu so‘zlar o‘zgaruvchan va o‘zgarmas degan ma’noni anglatadi.
-//
-// JavaScript’da ma’lumotlar 2 turga bo‘linadi:
-// primitive types va reference types.
-//
-// Primitive typelarga:
-// number, string, boolean, null, undefined kiradi.
-//
-// Reference typelarga esa:
-// object, array va function kiradi.
-//
-// Endi keling, buni VS Code’da misollar bilan ko‘rib chiqamiz.”**
+// const myArr = [1, 2, 3, 4, 5, 6];
+// const newArr = myArr.flatMap((x) => x * 2);
+// console.log(myArr);
