@@ -99,13 +99,13 @@
 
 
 
-const Arr = ["Bmw", "Porsche", "Supra,"];
-let add = prompt("Bir mashina Nomini yozing");
+// const Arr = ["Bmw", "Porsche", "Supra,"];
+// let add = prompt("Bir mashina Nomini yozing");
 
 
 
 
-console.log(Arr + add)
+// console.log(Arr + add)
 
 
 
@@ -126,30 +126,39 @@ console.log(Arr + add)
 // math = "Foundation";
 
 
+// every
+
+
+[2, 4, 6].every(num => num % 2 === 0)
+
+
+
+[1, 2, 3].every(num => num > 0)
+
+
+[1, -2, 3].every(num => num > 0)
 
 
 
 
 
+// some
+[1, 2, 3].some(num => num > 2)
 
 
+[-1, -2, -3].some(num => num > 0)
+
+[5, 10, 15].some(num => num === 10)
 
 
+// from
+
+Array.from(new Set([1, 2, 2, 1, 4, 3]));
+
+Array.from({length: 3})
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Array.from("abc")
 
 
 
