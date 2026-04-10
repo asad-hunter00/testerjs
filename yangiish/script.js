@@ -129,42 +129,67 @@
 // every
 
 
-[2, 4, 6].every(num => num % 2 === 0)
+// [2, 4, 6].every(num => num % 2 === 0)
 
 
 
-[1, 2, 3].every(num => num > 0)
+// [1, 2, 3].every(num => num > 0)
 
 
-[1, -2, 3].every(num => num > 0)
-
-
-
-
-
-// some
-[1, 2, 3].some(num => num > 2)
-
-
-[-1, -2, -3].some(num => num > 0)
-
-[5, 10, 15].some(num => num === 10)
-
-
-// from
-
-Array.from(new Set([1, 2, 2, 1, 4, 3]));
-
-Array.from({length: 3})
-
-
-Array.from("abc")
+// [1, -2, 3].every(num => num > 0)
 
 
 
 
 
+// // some
+// [1, 2, 3].some(num => num > 2)
 
+
+// [-1, -2, -3].some(num => num > 0)
+
+// [5, 10, 15].some(num => num === 10)
+
+
+// // from
+
+// Array.from(new Set([1, 2, 2, 1, 4, 3]));
+
+// Array.from({length: 3})
+
+
+// Array.from("abc")
+
+
+const seriesOf = +prompt("nechta serial kordingiz?")
+
+
+const ob = {
+    count: seriesOf,
+    series: {},
+    actors: {},
+    genres: [],
+    private: false,
+}
+
+for (let i = 0; i < 2; i++ ) {
+    const a = prompt("oxirgi korgan seriangiliz?")
+    const b = prompt("nechi baxo berasizo")
+    ob.series[a] = b;
+
+    if (a == null && b === null && a === '' && b !== '') {
+
+
+    }
+
+
+    console.log(a)
+    console.log(b)
+}
+
+
+
+console.log(ob);
 
 
 
