@@ -105,14 +105,79 @@
 // const math = "Information";
 // math = "Foundation";
 
-// let numbers = [24, 234, , 4234, 45, 1, 3, 45];
+// every
 
-// numbers.forEach(myFunction);
+// [2, 4, 6].every(num => num % 2 === 0)
 
-// function myFunction(value) {
-//     console.log(numbers);
-// }
+// [1, 2, 3].every(num => num > 0)
 
-// const myArr = [1, 2, 3, 4, 5, 6];
-// const newArr = myArr.flatMap((x) => x * 2);
-// console.log(myArr);
+// [1, -2, 3].every(num => num > 0)
+
+// // some
+// [1, 2, 3].some(num => num > 2)
+
+// [-1, -2, -3].some(num => num > 0)
+
+// [5, 10, 15].some(num => num === 10)
+
+// // from
+
+// Array.from(new Set([1, 2, 2, 1, 4, 3]));
+
+// Array.from({length: 3})
+
+// Array.from("abc")
+
+// “Reference type mutable, lekin agar biz uni qayta yangi qiymatga tenglasak — bu mutation emas, bu reassignment”
+
+// **“bugun o‘tadigan mavzumiz — mutable va immutable.
+// Bu so‘zlar o‘zgaruvchan va o‘zgarmas degan ma’noni anglatadi.
+//
+// JavaScript’da ma’lumotlar 2 turga bo‘linadi:
+// primitive types va reference types.
+//
+// Primitive typelarga:
+// number, string, boolean, null, undefined kiradi.
+//
+// Reference typelarga esa:
+// object, array va function kiradi.
+//
+// Endi keling, buni VS Code’da misollar bilan ko‘rib chiqamiz.”**
+
+// const names = ["Asadbek","Umar","Jasur","Asilbek","Diyorbek","Azizbek","Timur","Umid",
+// ];
+
+// let input = document.getElementById("input");
+// let list = document.getElementById("list");
+
+// input.output = () => {
+//   list.getElementById = "names";
+
+//   for (let i = 1; i < names.length; i++) {
+//     if (
+//       names[i].toLowerCase().trim().includes(input.value.toLowerCase().trim())
+//     ) {
+//       list.innerHTML += "<div>" + names[i] + "</div>";
+//     }
+//   }
+// };
+
+let input = document.getElementById("input");
+let list = document.getElementById("list");
+
+let filtered;
+
+function output() {
+  list.innerHTML = "";
+
+  filtered = users.filter((value) =>
+    value.username.toLowerCase().includes(input.value.toLowerCase().trim()),
+  );
+  console.log(filtered);
+  filterNames();
+}
+
+function filterNames() {
+  list.style.fontSize = 20pageXOffset;
+  list.innerHTML = filtered.map((value) => value.username);
+}
