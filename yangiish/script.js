@@ -79,17 +79,10 @@
 
 // console.log(f2())
 
-
-
-
-
-
 // var son = {
 //   name: "Saloh",
 //   age: 13,
 // };
-
-
 
 // var son2 = son;
 
@@ -97,30 +90,17 @@
 
 // console.log(son);
 
-
-
 // const Arr = ["Bmw", "Porsche", "Supra,"];
 // let add = prompt("Bir mashina Nomini yozing");
 
-
-
-
 // console.log(Arr + add)
-
-
-
-
-
-
 
 // var myHobby = "Code";
 // var myHobby = "scinence";
 // myHobby = "Javascript";
 
-
 // let cars = "Porsche";
 // cars =  "Bmw";
-
 
 // const math = "Information";
 // math = "Foundation";
@@ -161,35 +141,10 @@
 // Array.from("abc")
 
 
-const seriesOf = +prompt("nechta serial kordingiz?")
-
-
-const ob = {
-    count: seriesOf,
-    series: {},
-    actors: {},
-    genres: [],
-    private: false,
-}
-
-for (let i = 0; i < 2; i++ ) {
-    const a = prompt("oxirgi korgan seriangiliz?")
-    const b = prompt("nechi baxo berasizo")
-    ob.series[a] = b;
-
-    if (a == null && b === null && a === '' && b !== '') {
-
-
-    }
-
-
-    console.log(a)
-    console.log(b)
-}
 
 
 
-console.log(ob);
+
 
 
 
@@ -216,3 +171,27 @@ console.log(ob);
 // object, array va function kiradi.
 //
 // Endi keling, buni VS Code’da misollar bilan ko‘rib chiqamiz.”**
+
+
+
+const names = ["Asadbek", "Umar", "Jasur", "Asilbek", "Diyorbek", "Azizbek", "Timur", "Umid"];
+
+
+
+const input = document.getElementById("input")
+const list = document.getElementById("list")
+
+input.oninput = () => {
+    list.innerHTML = ""
+
+    for (let i = 0; i < names.length; i++) {
+        if (names[i].toLowerCase().trim().includes(input.value.toLowerCase().trim())) {
+            list.innerHTML += "<div>" + names[i] + "</div>";
+        }
+    }
+}
+
+list.onclick = i => {
+    console.log(e.target)
+    console.log(e.target.textContent)
+}
