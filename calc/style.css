@@ -1,0 +1,31 @@
+
+
+input {
+  border: 1px solid black;
+  padding: 10px 19px;
+  border-radius: 5px;
+}
+
+
+
+#down {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+}
+
+#down:hover {
+    border-color: #888;
+}
+
+#down:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+}
+
+

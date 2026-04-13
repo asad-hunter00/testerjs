@@ -178,6 +178,5 @@ function output() {
 }
 
 function filterNames() {
-  list.style.fontSize = 20pageXOffset;
   list.innerHTML = filtered.map((value) => value.username);
 }
