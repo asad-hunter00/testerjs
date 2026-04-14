@@ -2,12 +2,11 @@ let a = document.getElementById("input");
 let result = document.getElementById("result");
 
 function random() {
-    result.innerHTML = "";
+  result.innerHTML = "";
 
-    for (let i = 0; i < a; i++) {
-        let r = Math.floor(Math.random() * number.length);
-        result.innerHTML += number[r];
-    }
+  for (let i = 0; i < a; i++) {
+    let r = Math.floor(Math.random() * number.length);
+  }
 }
 
 random();
