@@ -24,7 +24,4 @@ function genearetNum() {
 console.log(genearetNum());
 
 
-function name(params) {
-  
-}
 
