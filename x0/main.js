@@ -23,7 +23,7 @@ console.log(a)
 
 
 
-
+a.onbeforematch((value) => console.log(value));
 
 
 
