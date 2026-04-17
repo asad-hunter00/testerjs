@@ -39,3 +39,35 @@ list.addEventListener("click", function (e) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// keraksiz kod
+let data = [1, 2, 3, 4, 5]
+
+function process() {
+    let result = 0
+
+    for (let i = 0; i < data.length; i++) {
+        let random = Math.floor(Math.random() * 10)
+
+        if (random % 2 === 0) {
+            result += data[i] * random
+        } else {
+            result -= data[i]
+        }
+    }
+
+    return result
+}
+
+process()
+
