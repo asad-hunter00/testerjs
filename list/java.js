@@ -1,28 +1,46 @@
+let input = document.querySelector(".top input");
+let btn = document.querySelector(".top button");
+let list = document.querySelector(".list");
+
+let listOfTasks = [];
+let counter = 1;
+
+function addTasks() {
+  let value = input.value;
+
+  if (value === "") return;
+
+  listOfTasks.push({
+    id: counter,
+    task: value,
+  });
+
+  counter++;
+  let input = (input.value = "");
+}
+
+function showOutput() {
+  list.innerHTML = "";
+  list.innerHTML = listOfTasks.join(
+    (value) => ` ${value.task} <div class="list">
+                <div class="top">
+                    <input type="text" placeholder="Yangi shart qo‘shing">
+                    <button>${value.id}</button>
+                </div>` ,
+  ); join();
+
+  console.log(showOutput)
+}
 
 
-let input = document.querySelector(".top input")
-let btn = document.querySelector(".top button")
-let list = document.querySelector(".list")
+function delateTasks() {
+    let item = listOfTasks.findIndex((value) => value.id == id);
+    listOfTasks.splice(item, 1);
+    showOutput();
+    
+}
 
-
-btn.onclick = function () {
-    let value = input.value;
-
-    if (value === "") return;
-
-
-
-    let div = document.createElement("div")
-
-    div.className = "task";
-    div.innerHTML = `<div class="left">
-    <input type="checkbox">
-    <span>${value}</span>
-</div>
-<span class="delete">×</span>`;
-
-    list.appendChild(div)
-
-    input.value = ""
-
-};
+function saveTask() {
+    let item = listOfTasks.find((value) => value.id == id);
+    item.task = input.value;
+}
