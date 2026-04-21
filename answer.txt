@@ -1,0 +1,2388 @@
+ARRAY                      OBJECT
+["olma", "nok"]            {ism: "Ali", yosh: 25}
+Tartibli royxat            Kalitli malumot
+Index bilan olinadi        Kalit bilan olinadi
+arr[0]                     obj.ism
+Bir xil narsalar           Har xil malumotlar
+
+
+
+
+taqqoslash opertaori 
+
+==   qiymati teng bo‘lsa (type muhim emas)
+===  qiymati ham, turi ham bir xil bo‘lsa
+
+!=   qiymati teng bo‘lmasa
+!==  qiymati yoki turi boshqacha bo‘lsa
+
+>    chap tomondagi katta bo‘lsa
+<    chap tomondagi kichik bo‘lsa
+
+>=   katta yoki teng bo‘lsa
+<=   kichik yoki teng bo‘lsa
+
+
+5 == "5"   // true
+5 === "5"  // false
+
+5 != 3     // true
+5 !== "5"  // true
+
+10 > 5     // true
+3 < 5      // true
+
+5 >= 5     // true
+4 <= 5     // true
+
+
+shart ? qiymat1 : qiymat2
+
+? :  → if else qisqa ko‘rinishi
+
+let age = 18
+
+let result = age >= 18 ? "Katta" : "Kichik"
+console.log(result)
+
+
+Shartli operatorlar nima?
+
+ Agar biror shart bajarilsa — bir ish qiladi, bo‘lmasa boshqa ish qiladi
+ 
+ let age = 18
+
+if (age >= 18) {
+    console.log("Kirish mumkin")
+}
+
+
+let age = 16
+
+if (age >= 18) {
+    console.log("Kirish mumkin")
+} else {
+    console.log("Kirish mumkin emas")
+}
+
+
+let ball = 85
+
+
+if (ball >= 90) {
+    console.log("A")
+} else if (ball >= 70) {
+    console.log("B")
+} else {
+    console.log("C")
+}
+
+
+if else  → true bo‘lsa darrov to‘xtaydi
+switch   → break bo‘lsa to‘xtaydi
+           break bo‘lmasa oxirigacha ketadi
+           
+           
+           
+           
+           
+           logical operator
+           
+true  && true  = true
+true  && false = false
+false && true  = false
+false && false = false
+
+
+!true  = false
+!false = true
+
+
+
+&& → hammasi true bo‘lishi kerak
+|| → bittasi true bo‘lsa yetadi
+!  → teskarisiga aylantiradi 
+
+
+
+
+
+
+
+Tsikl — bu bir xil amalni bir necha marta avtomatik bajarish usuli.
+
+Oddiy qilib aytganda, agar sen biror ishni qayta-qayta qilishni xohlasang, har safar alohida yozmaysan — tsikl yozasan, u o‘zi takrorlaydi.
+
+kodni qisqartiradi
+vaqtni tejaydi
+bir xil ishni ko‘p marta bajaradi
+
+
+
+
+for (let i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+
+
+
+
+exp1 sikl boshlanishidan oldin o'zgaruvchini o'rnatadi (i = 0 bo'lsin).
+
+exp2 siklning ishlashi shartini belgilaydi (i 5 dan kichik bo'lishi kerak).
+
+
+
+Sikl do whilekod blokini shart rost yoki yo'qligini tekshirishdan oldin bir marta bajaradi, keyin shart rost bo'lguncha siklni takrorlaydi.
+
+
+
+
+let i = 5;
+
+for (i = 0; i < 10; i++) {
+  // some code
+}
+
+
+
+loop doirasi
+
+exp3 kod bloki har safar bajarilganda qiymatni (i++) oshiradi.
+
+
+
+
+
+Bu continuebayonot joriy iteratsiyani siklda o'tkazib yuboradi.
+
+Iteratsiyadagi qolgan kod o'tkazib yuboriladi va ishlov berish keyingi iteratsiyaga o'tadi.
+
+
+
+
+Boshqaruv oqimi - bu dasturda operatorlarning bajarilish tartibi.
+
+Odatiy bo'lib, JavaScript kodni yuqoridan pastga va chapdan o'ngga ishga tushiradi.
+
+Boshqaruv oqimi operatorlari sizga shartlar, sikllar yoki kalit so'zlar asosida ushbu tartibni o'zgartirish imkonini beradi.
+
+
+
+
+
+
+
+
+for       → nechta aylanish aniq
+while     → shartga bog‘liq
+do while  → kamida 1 marta ishlaydi
+
+forEach   → faqat array
+for in    → object keylari
+for of    → array qiymatlari
+
+continue  → skip qiladi (o‘tkazadi)
+
+
+
+
+
+misollar 
+
+// =========================
+// JAVASCRIPT LOOP (TSIKL)
+// =========================
+
+
+// 1. FOR LOOP
+// for → qachon ishlatiladi:
+// agar necha marta aylanishini oldindan bilsang
+
+// sintaksis:
+// boshlanish; shart; o‘zgarish
+
+for (let i = 0; i < 5; i++) {
+    console.log(i)
+}
+
+// tushuntirish:
+// let i = 0  → boshlanish
+// i < 5      → shart (5 ga yetguncha)
+// i++        → har safar +1
+
+// natija:
+// 0 1 2 3 4
+
+
+
+// =========================
+// 2. WHILE LOOP
+// =========================
+
+// while → shart true bo‘lsa ishlaydi
+
+let i = 0
+
+while (i < 5) {
+    console.log(i)
+    i++
+}
+
+// tushuntirish:
+// i 5 dan kichik bo‘lsa → ishlaydi
+// i++ bo‘lmasa → infinite loop bo‘lib qoladi ❗
+
+
+// =========================
+// 3. DO WHILE LOOP
+// =========================
+
+// do while → kamida 1 marta ishlaydi
+
+let j = 0
+
+do {
+    console.log(j)
+    j++
+} while (j < 5)
+
+// farqi:
+// while → avval tekshiradi
+// do while → avval bajaradi, keyin tekshiradi
+
+
+
+// =========================
+// 4. FOREACH
+// =========================
+
+// forEach → faqat array bilan ishlaydi
+
+let arr = [10, 20, 30]
+
+arr.forEach(function (item) {
+    console.log(item)
+})
+
+// tushuntirish:
+// item → array ichidagi har bir qiymat
+
+
+
+// =========================
+// 5. FOR OF
+// =========================
+
+// for of → array qiymatlarini oladi
+
+let arr2 = [10, 20, 30]
+
+for (let value of arr2) {
+    console.log(value)
+}
+
+// farqi:
+// forEach va for of deyarli bir xil ishlaydi
+
+
+
+// =========================
+// 6. FOR IN
+// =========================
+
+// for in → object ichidagi keylarni oladi
+
+let obj = {a: 1, b: 2}
+
+for (let key in obj) {
+    console.log(key)
+}
+
+// natija:
+// a b
+
+// agar value kerak bo‘lsa:
+// obj[key]
+
+
+
+// =========================
+// 7. CONTINUE
+// =========================
+
+// continue → loop ichida bitta qadamni tashlab ketadi
+
+for (let i = 1; i <= 5; i++) {
+
+    if (i == 3) {
+        continue
+    }
+
+    console.log(i)
+}
+
+// natija:
+// 1 2 4 5
+
+// tushuntirish:
+// i == 3 bo‘lganda → skip qiladi
+
+
+
+// =========================
+// 8. BREAK
+// =========================
+
+// break → loopni to‘xtatadi
+
+for (let i = 1; i <= 5; i++) {
+
+    if (i == 3) {
+        break
+    }
+
+    console.log(i)
+}
+
+// natija:
+// 1 2
+
+// tushuntirish:
+// 3 ga yetganda → loop to‘xtadi
+
+
+
+// =========================
+// QISQA XULOSA
+// =========================
+
+// for       → necha marta aniq bo‘lsa
+// while     → shartga bog‘liq
+// do while  → kamida 1 marta ishlaydi
+
+// forEach   → array
+// for of    → array value
+// for in    → object key
+
+// continue  → skip
+// break     → to‘xtatadi
+
+
+
+================================================
+JS LOOPLAR (TSIKLLAR)
+================================================
+ 
+FOR - Soni malum bolganda
+--------------------------
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+- Qachon: necha marta ishlashini OLDINDAN bilsangiz
+- Natija: 0, 1, 2, 3, 4
+ 
+ 
+FOR...OF - Array elementlarini olish
+--------------------------------------
+let mevalar = ["olma", "nok", "uzum"];
+for (let meva of mevalar) {
+    console.log(meva);
+}
+- Qachon: Array ELEMENTLARI kerak bolganda
+- Natija: olma, nok, uzum
+ 
+ 
+FOR...IN - Object kalitlarini olish
+-------------------------------------
+let odam = { ism: "Ali", yosh: 25 };
+for (let kalit in odam) {
+    console.log(kalit, "->", odam[kalit]);
+}
+- Qachon: Object KALITLARI kerak bolganda
+- Natija: ism -> Ali, yosh -> 25
+ 
+ 
+WHILE - Shart asosida
+----------------------
+let son = 1;
+while (son <= 5) {
+    console.log(son);
+    son++;
+}
+- Qachon: necha marta ishlashini BILMASANGIZ, faqat shart bilsangiz
+- Natija: 1, 2, 3, 4, 5
+ 
+ 
+DO...WHILE - Kamida 1 marta ishlaydi
+--------------------------------------
+let son = 1;
+do {
+    console.log(son);
+    son++;
+} while (son <= 5);
+- Qachon: kamida 1 marta ishlashi SHART bolganda
+- Farqi: avval ishlaydi, keyin shart tekshiradi
+- Natija: 1, 2, 3, 4, 5
+ 
+ 
+BREAK - Tsiklni toxtatadi
+--------------------------
+for (let i = 1; i <= 5; i++) {
+    if (i === 3) break;
+    console.log(i);
+}
+- Natija: 1, 2 (3 da toxtatdi)
+ 
+ 
+CONTINUE - Shu qadamni otkazib yuboradi
+-----------------------------------------
+for (let i = 1; i <= 5; i++) {
+    if (i === 3) continue;
+    console.log(i);
+}
+- Natija: 1, 2, 4, 5 (3 ni otkazdi)
+ 
+ 
+LOOPLAR JADVALI:
+-----------------
+for        -> Soni aniq
+for...of   -> Array elementlari
+for...in   -> Object kalitlari
+while      -> Shart asosida, soni nomalum
+do...while -> Kamida 1 marta ishlaydi
+break      -> Toxtат, chiq
+continue   -> Bu qadamni otqaz, davom et
+ 
+ 
+================================================
+JS STRING METODLARI
+================================================
+ 
+length - Uzunlik
+-----------------
+let ism = "Jasur";
+ism.length -> 5
+ 
+ 
+charAt() - Index boyicha harf olish
+-------------------------------------
+let ism = "Jasur";
+ism.charAt(0) -> J
+ism.charAt(2) -> s
+ 
+ 
+at() - Zamonaviy index olish
+------------------------------
+let ism = "Jasur";
+ism.at(0)  -> J  (boshidan)
+ism.at(-1) -> r  (oxiridan)
+ 
+ 
+concat() - Birlashtirish
+-------------------------
+let ism = "Ali";
+let familiya = "Karimov";
+ism.concat(" ", familiya) -> "Ali Karimov"
+ 
+ 
+slice() - Qismini kesib olish
+------------------------------
+let gap = "Salom Toshkent";
+gap.slice(6)     -> "Toshkent"
+gap.slice(0, 5)  -> "Salom"
+gap.slice(-8)    -> "Toshkent"
+ 
+ 
+substring() - Qismini olish
+-----------------------------
+let gap = "Salom Toshkent";
+gap.substring(0, 5) -> "Salom"
+gap.substring(6)    -> "Toshkent"
+- Farqi: manfiy index ishlamaydi
+ 
+ 
+substr() - Qismini olish (eski usul)
+--------------------------------------
+let gap = "Salom Toshkent";
+gap.substr(6, 8) -> "Toshkent"
+- Farqi: ikkinchi parametr nechta harf olish
+ 
+ 
+toUpperCase() - Katta harfga
+-----------------------------
+"ali".toUpperCase() -> "ALI"
+ 
+ 
+toLowerCase() - Kichik harfga
+------------------------------
+"ALI".toLowerCase() -> "ali"
+ 
+ 
+trim() - Bosh va oxir bosliqlarni ochirish
+-------------------------------------------
+"   Salom   ".trim()      -> "Salom"
+"   Salom   ".trimStart() -> "Salom   "
+"   Salom   ".trimEnd()   -> "   Salom"
+ 
+ 
+padStart() / padEnd() - Toldirish
+-----------------------------------
+"5".padStart(3, "0") -> "005"
+"5".padEnd(3, "0")   -> "500"
+ 
+ 
+repeat() - Takrorlash
+----------------------
+"ha".repeat(4) -> "hahahaha"
+ 
+ 
+replace() / replaceAll() - Almashtirish
+-----------------------------------------
+let gap = "Ali keldi, Ali ketdi";
+gap.replace("Ali", "Vali")    -> "Vali keldi, Ali ketdi"  (faqat birinchisi)
+gap.replaceAll("Ali", "Vali") -> "Vali keldi, Vali ketdi" (hammasi)
+ 
+ 
+split() - Arrayga ajratish
+---------------------------
+"olma,nok,uzum".split(",") -> ["olma", "nok", "uzum"]
+"Jasur".split("")          -> ["J", "a", "s", "u", "r"]
+ 
+ 
+================================================
+JS STRING SEARCH METODLARI
+================================================
+ 
+indexOf() - Birinchi topilgan index
+-------------------------------------
+gap.indexOf("Ali")  -> 0   (topildi)
+gap.indexOf("Vali") -> -1  (topilmadi)
+ 
+ 
+lastIndexOf() - Oxirgi topilgan index
+---------------------------------------
+"Ali keldi, Ali ketdi".lastIndexOf("Ali") -> 11
+ 
+ 
+includes() - Bor yoki yoq
+--------------------------
+gap.includes("Toshkent")  -> true
+gap.includes("Samarqand") -> false
+ 
+ 
+startsWith() - Shu sozdan boshlanadimi
+---------------------------------------
+"Salom dunyo".startsWith("Salom") -> true
+"Salom dunyo".startsWith("dunyo") -> false
+ 
+ 
+endsWith() - Shu soz bilan tugaydimi
+--------------------------------------
+"Salom dunyo".endsWith("dunyo") -> true
+"Salom dunyo".endsWith("Salom") -> false
+ 
+ 
+search() - Index qidirish
+--------------------------
+gap.search("Toshkent")  -> 6
+gap.search("Samarqand") -> -1
+ 
+ 
+match() - Birinchi moslikni topish
+------------------------------------
+"Ali keldi, Ali ketdi".match("Ali") -> ["Ali"]
+ 
+ 
+matchAll() - Barcha mosliklarni topish
+----------------------------------------
+let natija = [..."Ali keldi, Ali ketdi".matchAll("Ali")];
+natija.length -> 2
+ 
+ 
+================================================
+SEARCH METODLARI JADVALI
+================================================
+ 
+indexOf()     -> Index qaytaradi -> Birinchi topilgan
+lastIndexOf() -> Index qaytaradi -> Oxirgi topilgan
+includes()    -> true/false      -> Bor yoki yoq
+startsWith()  -> true/false      -> Boshlanishini tekshiradi
+endsWith()    -> true/false      -> Tugashini tekshiradi
+search()      -> Index qaytaradi -> indexOf ga oxshash
+match()       -> Array           -> Birinchi moslik
+matchAll()    -> Array           -> Barcha mosliklar
+ 
+================================================
+ 
+
+
+
+map()— massivning har bir elementini o'zgartirib, yangi massiv qaytaradi.
+
+Tasavvur qiling — fabrika! Ichiga xom ashyo mahsuloti, tayyor mahsulot chiqadi 🏭
+
+
+
+
+
+let sonlar = [1, 2, 3, 4, 5];
+
+// Eski usul — for loop
+let natija = [];
+for (let i = 0; i < sonlar.length; i++) {
+    natija.push(sonlar[i] * 2);
+}
+console.log(natija); // [2, 4, 6, 8, 10]
+
+// Yangi usul — map ✅
+let natija2 = sonlar.map(son => son * 2);
+console.log(natija2); // [2, 4, 6, 8, 10]
+
+
+
+
+
+================================================
+JS FUNKSIYALAR — TO'LIQ QOLLANMA
+================================================
+
+FUNKSIYA NIMA?
+--------------
+Funksiya — bir guruh kod bo'lib,
+uni qayta qayta ishlatish mumkin.
+
+Tasavvur: choy qaynatish mashina!
+Har safar "ishga tushir" desangiz — choy tayyorlaydi.
+
+
+================================================
+1. ODDIY FUNKSIYA
+================================================
+
+function salom() {
+    console.log("Salom dunyo!");
+}
+
+salom(); // Salom dunyo!
+salom(); // Salom dunyo!
+
+- Bir marta yozdingiz — xohlagan joyda chaqirasiz
+
+
+================================================
+2. PARAMETRLI FUNKSIYA
+================================================
+
+function salom(ism) {
+    console.log("Salom " + ism + "!");
+}
+
+salom("Ali");   // Salom Ali!
+salom("Jasur"); // Salom Jasur!
+
+- Parametr — funksiyaga beriladigan malumot
+- Bir xil funksiya, boshqa natija
+
+
+================================================
+3. RETURN — NATIJA QAYTARISH
+================================================
+
+function qoshish(a, b) {
+    return a + b;
+}
+
+let natija = qoshish(5, 3);
+console.log(natija); // 8
+
+- return — funksiya natija qaytaradi va TOXTATADI
+- returndan keyin kod ishlamaydi!
+
+function misol() {
+    return "salom";
+    console.log("bu chiqmaydi"); // ishlamaydi!
+}
+
+
+================================================
+4. FUNKSIYA TURLARI
+================================================
+
+// Oddiy funksiya
+function salom() {
+    console.log("Salom!");
+}
+
+// Funksiya ozgaruvchida
+let salom2 = function() {
+    console.log("Salom!");
+}
+
+// Arrow funksiya (ZAMONAVIY) - kop ishlatiladi
+let salom3 = () => {
+    console.log("Salom!");
+}
+
+// Arrow — qisqa yozish (1 qator)
+let qoshish = (a, b) => a + b;
+console.log(qoshish(5, 3)); // 8
+
+// Parametr 1 ta bolsa qavsiz yozish mumkin
+let ikkilash = son => son * 2;
+console.log(ikkilash(5)); // 10
+
+
+================================================
+5. DEFAULT PARAMETR
+================================================
+
+function salom(ism = "Dostim") {
+    console.log("Salom " + ism + "!");
+}
+
+salom("Ali"); // Salom Ali!
+salom();      // Salom Dostim! (parametr berilmasa)
+
+- Parametr berilmasa — default qiymat ishlatiladi
+
+
+================================================
+6. KOP PARAMETR — REST (...)
+================================================
+
+function yigindi(...sonlar) {
+    return sonlar.reduce((sum, son) => sum + son, 0);
+}
+
+console.log(yigindi(1, 2, 3));       // 6
+console.log(yigindi(1, 2, 3, 4, 5)); // 15
+
+- ... — qancha parametr bolsa hammasini oladi
+
+
+================================================
+7. FUNKSIYA ICHIDA FUNKSIYA
+================================================
+
+function hisobla(a, b) {
+    function qoshish() {
+        return a + b;
+    }
+    return qoshish();
+}
+
+console.log(hisobla(3, 4)); // 7
+
+
+================================================
+8. CALLBACK FUNKSIYA
+================================================
+
+function bajar(funksiya) {
+    funksiya();
+}
+
+function salom() {
+    console.log("Salom!");
+}
+
+bajar(salom); // Salom!
+
+- Funksiyani boshqa funksiyaga parametr sifatida berish
+- map, filter, forEach — barchasi callback ishlatadi
+
+// Misol:
+let sonlar = [1, 2, 3];
+sonlar.map(son => son * 2); // arrow funksiya = callback
+
+
+================================================
+NIMALARNI BILISH KERAK — MUHIMLIK
+================================================
+
+Oddiy funksiya          -> *****  (shart)
+Parametr va return      -> *****  (shart)
+Arrow funksiya          -> *****  (shart)
+Default parametr        -> ****   (muhim)
+Callback                -> ****   (muhim)
+Rest parametr (...)     -> ***    (yaxshi bilish)
+Funksiya ichida funksiya-> ***    (yaxshi bilish)
+
+
+================================================
+QISQA ESLATMA
+================================================
+
+// Oddiy
+function nom(parametr) {
+    return natija;
+}
+
+// Arrow
+let nom = (parametr) => natija;
+
+// Chaqirish
+nom(qiymat);
+
+// Natijani saqlash
+let x = nom(qiymat);
+
+================================================
+
+
+
+
+
+================================================
+JS OBJECT — TO'LIQ QOLLANMA
+================================================
+
+OBJECT NIMA?
+-------------
+Object — kalit: qiymat juftligi.
+Biror narsaning barcha malumotlarini bir joyda saqlaydi.
+
+Tasavvur: shaxsiy guvohnoma!
+Ichida ism, yosh, manzil — hammasi bir joyda.
+
+Array vs Object:
+- Array  -> [1, 2, 3]          — tartibli royxat
+- Object -> {ism: "Ali"}       — kalitli malumot
+
+
+================================================
+1. OBJECT YARATISH
+================================================
+
+let odam = {
+    ism: "Ali",
+    yosh: 25,
+    shahar: "Toshkent"
+};
+
+- ism, yosh, shahar  -> KALIT (key)
+- "Ali", 25, "Toshkent" -> QIYMAT (value)
+
+
+================================================
+2. MALUMOT OLISH
+================================================
+
+let odam = { ism: "Ali", yosh: 25 };
+
+// Nuqta bilan (kop ishlatiladi)
+console.log(odam.ism);    // Ali
+console.log(odam.yosh);   // 25
+
+// Qavslar bilan
+console.log(odam["ism"]); // Ali
+
+// Farqi: kalit ozgaruvchida bolsa qavslar ishlatiladi
+let kalit = "ism";
+console.log(odam[kalit]); // Ali
+
+
+================================================
+3. MALUMOT QOSHISH VA OZGARTIRISH
+================================================
+
+let odam = { ism: "Ali", yosh: 25 };
+
+// Ozgartirish
+odam.yosh = 30;
+console.log(odam.yosh); // 30
+
+// Yangi kalit qoshish
+odam.shahar = "Toshkent";
+console.log(odam.shahar); // Toshkent
+
+
+================================================
+4. OCHIRISH — delete
+================================================
+
+let odam = { ism: "Ali", yosh: 25 };
+
+delete odam.yosh;
+console.log(odam); // { ism: "Ali" }
+
+
+================================================
+5. TEKSHIRISH — in
+================================================
+
+let odam = { ism: "Ali", yosh: 25 };
+
+console.log("ism" in odam);    // true
+console.log("shahar" in odam); // false
+
+
+================================================
+6. METHOD — OBJECT ICHIDA FUNKSIYA
+================================================
+
+let odam = {
+    ism: "Ali",
+    salom: function() {
+        console.log("Salom, men " + this.ism + "!");
+    }
+};
+
+odam.salom(); // Salom, men Ali!
+
+- Object ichidagi funksiya = METHOD deyiladi
+- this.ism — shu objectning ism kalitini oladi
+
+
+================================================
+7. OBJECT METODLARI
+================================================
+
+let odam = { ism: "Ali", yosh: 25, shahar: "Toshkent" };
+
+// Object.keys() — kalitlarni olish
+Object.keys(odam);
+// ["ism", "yosh", "shahar"]
+
+// Object.values() — qiymatlarni olish
+Object.values(odam);
+// ["Ali", 25, "Toshkent"]
+
+// Object.entries() — kalit va qiymatni birga olish
+Object.entries(odam);
+// [["ism","Ali"], ["yosh",25], ["shahar","Toshkent"]]
+
+// Object.assign() — objectlarni birlashtirish
+let a = { ism: "Ali" };
+let b = { yosh: 25 };
+let yangi = Object.assign({}, a, b);
+// { ism: "Ali", yosh: 25 }
+
+
+================================================
+8. SPREAD — NUSXA OLISH
+================================================
+
+let odam = { ism: "Ali", yosh: 25 };
+
+// Nusxa olish
+let nusxa = { ...odam };
+nusxa.ism = "Vali";
+
+console.log(odam.ism);  // Ali  — ozgarmadi!
+console.log(nusxa.ism); // Vali
+
+// Birlashtirish
+let a = { ism: "Ali" };
+let b = { yosh: 25 };
+let birga = { ...a, ...b };
+// { ism: "Ali", yosh: 25 }
+
+
+================================================
+9. DESTRUCTURING — AJRATIB OLISH
+================================================
+
+let odam = { ism: "Ali", yosh: 25, shahar: "Toshkent" };
+
+// Oddiy usul
+let ism = odam.ism;
+let yosh = odam.yosh;
+
+// Destructuring usuli (qisqa) ✅
+let { ism, yosh } = odam;
+
+console.log(ism);  // Ali
+console.log(yosh); // 25
+
+// Default qiymat bilan
+let { ism, telefon = "Yoq" } = odam;
+console.log(telefon); // Yoq (objectda yoq edi)
+
+// Boshqa nom bilan
+let { ism: fullName } = odam;
+console.log(fullName); // Ali
+
+
+================================================
+10. OBJECT ICHIDA OBJECT
+================================================
+
+let odam = {
+    ism: "Ali",
+    manzil: {
+        shahar: "Toshkent",
+        tuman: "Chilonzor"
+    }
+};
+
+console.log(odam.manzil.shahar); // Toshkent
+console.log(odam.manzil.tuman);  // Chilonzor
+
+// Destructuring bilan
+let { manzil: { shahar } } = odam;
+console.log(shahar); // Toshkent
+
+
+================================================
+11. OBJECT ICHIDA ARRAY
+================================================
+
+let odam = {
+    ism: "Ali",
+    hobbylar: ["futbol", "kitob", "musiqa"]
+};
+
+console.log(odam.hobbylar[0]); // futbol
+console.log(odam.hobbylar);    // ["futbol", "kitob", "musiqa"]
+
+// hobbylar boylab aylanish
+odam.hobbylar.forEach(hobby => console.log(hobby));
+
+
+================================================
+12. FOR...IN BILAN OBJECT BOYLAB AYLANISH
+================================================
+
+let odam = { ism: "Ali", yosh: 25, shahar: "Toshkent" };
+
+for (let kalit in odam) {
+    console.log(kalit, "->", odam[kalit]);
+}
+// ism -> Ali
+// yosh -> 25
+// shahar -> Toshkent
+
+
+================================================
+NIMALARNI BILISH KERAK — MUHIMLIK
+================================================
+
+Object yaratish              -> *****  (shart)
+Malumot olish (. va [])      -> *****  (shart)
+Qoshish, ozgartirish         -> *****  (shart)
+Object.keys/values/entries   -> *****  (shart)
+Destructuring                -> *****  (shart)
+Spread (...)                 -> ****   (muhim)
+Method (funksiya ichida)     -> ****   (muhim)
+Object ichida Object         -> ****   (muhim)
+delete, in                   -> ***    (yaxshi bilish)
+
+
+================================================
+QISQA ESLATMA
+================================================
+
+Yaratish:      let obj = { kalit: qiymat }
+Olish:         obj.kalit  yoki  obj["kalit"]
+Ozgartirish:   obj.kalit = yangiQiymat
+Qoshish:       obj.yangiKalit = qiymat
+Ochirish:      delete obj.kalit
+Tekshirish:    "kalit" in obj
+Kalitlar:      Object.keys(obj)
+Qiymatlar:     Object.values(obj)
+Ikkalasi:      Object.entries(obj)
+Nusxa:         let yangi = { ...obj }
+Ajratib olish: let { kalit } = obj
+
+================================================
+
+
+
+
+================================================
+JS DATE — TO'LIQ QOLLANMA
+================================================
+
+DATE NIMA?
+-----------
+Date — JS da sana va vaqt bilan ishlash uchun.
+Bugungi kun, vaqt, yil — hammasini olish mumkin.
+
+
+================================================
+1. DATE YARATISH
+================================================
+
+// Hozirgi sana va vaqt
+let hozir = new Date();
+console.log(hozir); // 2026-04-21T10:30:00.000Z
+
+// Aniq sana (yil, oy, kun)
+// DIQQAT: Oy 0 dan boshlanadi! (0=Yanvar, 11=Dekabr)
+let sana = new Date(2026, 3, 21); // 2026 Aprel 21
+
+// Aniq sana va vaqt (yil, oy, kun, soat, daqiqa, soniya)
+let sana2 = new Date(2026, 3, 21, 10, 30, 0);
+
+// String dan
+let sana3 = new Date("2026-04-21");
+
+
+================================================
+2. SANA OLISH METODLARI (get)
+================================================
+
+let sana = new Date();
+
+sana.getFullYear()  // Yil        -> 2026
+sana.getMonth()     // Oy (0-11)  -> 3 (Aprel)
+sana.getDate()      // Kun (1-31) -> 21
+sana.getDay()       // Hafta kuni -> 0-6 (0=Yakshanba)
+sana.getHours()     // Soat       -> 0-23
+sana.getMinutes()   // Daqiqa     -> 0-59
+sana.getSeconds()   // Soniya     -> 0-59
+sana.getMilliseconds() // Millisekund -> 0-999
+sana.getTime()      // Timestamp (1970 dan beri ms)
+
+
+================================================
+3. OY 0 DAN BOSHLANADI — EHTIYOT BOLING!
+================================================
+
+let sana = new Date();
+console.log(sana.getMonth());     // 3 -> Aprel (NOTO'GRI)
+console.log(sana.getMonth() + 1); // 4 -> Aprel (TO'GRI) ✅
+
+// Oylar:
+// 0 = Yanvar
+// 1 = Fevral
+// 2 = Mart
+// 3 = Aprel
+// 4 = May
+// 5 = Iyun
+// 6 = Iyul
+// 7 = Avgust
+// 8 = Sentyabr
+// 9 = Oktyabr
+// 10 = Noyabr
+// 11 = Dekabr
+
+// Hafta kunlari:
+// 0 = Yakshanba
+// 1 = Dushanba
+// 2 = Seshanba
+// 3 = Chorshanba
+// 4 = Payshanba
+// 5 = Juma
+// 6 = Shanba
+
+
+================================================
+4. SANA OZGARTIRISH METODLARI (set)
+================================================
+
+let sana = new Date();
+
+sana.setFullYear(2030); // Yilni ozgartiradi
+sana.setMonth(0);       // Yanvarga ozgartiradi
+sana.setDate(1);        // 1-kunga ozgartiradi
+sana.setHours(12);      // 12 soatga ozgartiradi
+sana.setMinutes(0);     // 0 daqiqaga ozgartiradi
+sana.setSeconds(0);     // 0 soniyaga ozgartiradi
+
+
+================================================
+5. SANANI CHIROYLI KORSATISH
+================================================
+
+let sana = new Date();
+
+sana.toLocaleDateString()  // 4/21/2026
+sana.toLocaleTimeString()  // 10:30:00 AM
+sana.toLocaleString()      // 4/21/2026, 10:30:00 AM
+sana.toDateString()        // Tue Apr 21 2026
+sana.toTimeString()        // 10:30:00 GMT+0500
+sana.toISOString()         // 2026-04-21T10:30:00.000Z
+sana.toString()            // Tue Apr 21 2026 10:30:00
+
+// Uzbekcha format (qolda)
+let kun = sana.getDate();
+let oy  = sana.getMonth() + 1;
+let yil = sana.getFullYear();
+console.log(kun + "/" + oy + "/" + yil); // 21/4/2026
+
+
+================================================
+6. IKI SANANI SOLISHTIRISH
+================================================
+
+let sana1 = new Date(2026, 0, 1);   // 1 Yanvar 2026
+let sana2 = new Date(2026, 11, 31); // 31 Dekabr 2026
+
+console.log(sana1 < sana2);  // true  (sana1 oldin)
+console.log(sana1 > sana2);  // false
+console.log(sana1 === sana2); // false
+
+
+================================================
+7. IKI SANA ORASIDAGI FARQ
+================================================
+
+let boshlanish = new Date(2026, 0, 1);
+let tugash     = new Date(2026, 11, 31);
+
+let farq = tugash - boshlanish; // millisekund
+
+// Kunlarga aylantirish
+let kunlar = farq / (1000 * 60 * 60 * 24);
+console.log(Math.round(kunlar)); // 364 kun
+
+// Soatlarga aylantirish
+let soatlar = farq / (1000 * 60 * 60);
+console.log(Math.round(soatlar)); // 8736 soat
+
+
+================================================
+8. TIMESTAMP — Date.now()
+================================================
+
+console.log(Date.now());
+// 1713689400000
+// 1970 yil 1 Yanvardan beri otgan millisekundlar
+
+// Kod tezligini olchash
+let boshlanish = Date.now();
+// ... kod ...
+let tugash = Date.now();
+console.log(tugash - boshlanish + " ms"); // necha ms ketdi
+
+
+================================================
+9. AMALIY MISOLLAR
+================================================
+
+// Bugungi sanani chiqarish
+let sana = new Date();
+let kun = sana.getDate();
+let oy  = sana.getMonth() + 1;
+let yil = sana.getFullYear();
+console.log(kun + "/" + oy + "/" + yil); // 21/4/2026
+
+// Hozirgi vaqtni chiqarish
+let soat    = sana.getHours();
+let daqiqa  = sana.getMinutes();
+let soniya  = sana.getSeconds();
+console.log(soat + ":" + daqiqa + ":" + soniya); // 10:30:0
+
+// Tug'ilgan kundan yosh hisoblash
+let tugGun = new Date(2000, 0, 1); // 1 Yanvar 2000
+let hozir  = new Date();
+let yosh   = hozir.getFullYear() - tugGun.getFullYear();
+console.log(yosh + " yosh"); // 26 yosh
+
+// Hafta kuni nomi
+let kunlar = ["Yakshanba","Dushanba","Seshanba",
+              "Chorshanba","Payshanba","Juma","Shanba"];
+let bugun  = new Date();
+console.log(kunlar[bugun.getDay()]); // Masalan: Seshanba
+
+
+================================================
+QISQA ESLATMA — JADVAL
+================================================
+
+OLISH (get):
+getFullYear()    -> Yil
+getMonth()       -> Oy (0-11, +1 qiling!)
+getDate()        -> Kun (1-31)
+getDay()         -> Hafta kuni (0-6)
+getHours()       -> Soat (0-23)
+getMinutes()     -> Daqiqa (0-59)
+getSeconds()     -> Soniya (0-59)
+getTime()        -> Timestamp
+
+OZGARTIRISH (set):
+setFullYear(yil) -> Yilni ozgartir
+setMonth(oy)     -> Oyni ozgartir
+setDate(kun)     -> Kunni ozgartir
+setHours(soat)   -> Soatni ozgartir
+
+KORSATISH:
+toLocaleDateString() -> 4/21/2026
+toLocaleTimeString() -> 10:30:00 AM
+toLocaleString()     -> 4/21/2026, 10:30:00 AM
+toISOString()        -> 2026-04-21T10:30:00.000Z
+
+MUHIM:
+- Oy 0 dan boshlanadi! (getMonth() + 1 qiling)
+- Hafta 0=Yakshanba dan boshlanadi
+- Date.now() -> hozirgi timestamp
+
+================================================
+
+
+
+
+================================================
+JS ARRAY — TO'LIQ QOLLANMA
+================================================
+
+ARRAY NIMA?
+------------
+Array — tartibli royxat.
+Malumotlarni bir joyda saqlaydi.
+
+Tasavvur: xarid royxati!
+Ichida olma, nok, uzum — hammasi tartib bilan.
+
+Array vs Object:
+- Array  -> ["olma", "nok"]  — tartibli royxat
+- Object -> {ism: "Ali"}     — kalitli malumot
+
+
+================================================
+1. ARRAY YARATISH
+================================================
+
+let mevalar = ["olma", "nok", "uzum"];
+let sonlar  = [1, 2, 3, 4, 5];
+let aralash = ["Ali", 25, true, null];
+let bosh    = []; // Bosh array
+
+
+================================================
+2. ELEMENT OLISH
+================================================
+
+let mevalar = ["olma", "nok", "uzum"];
+//              0        1      2
+
+mevalar[0] // olma
+mevalar[1] // nok
+mevalar[2] // uzum
+
+// Oxirgi element
+mevalar[mevalar.length - 1] // uzum
+
+
+================================================
+3. LENGTH — UZUNLIK
+================================================
+
+let mevalar = ["olma", "nok", "uzum"];
+mevalar.length // 3
+
+
+================================================
+4. AT() — ZAMONAVIY ELEMENT OLISH
+================================================
+
+let mevalar = ["olma", "nok", "uzum"];
+
+mevalar.at(0)  // olma (boshidan)
+mevalar.at(-1) // uzum (oxiridan) ✅
+mevalar.at(-2) // nok
+
+
+================================================
+5. PUSH / POP — OXIRDAN QOSHISH/OCHIRISH
+================================================
+
+let mevalar = ["olma", "nok"];
+
+// push — oxiriga qoshadi
+mevalar.push("uzum");
+// ["olma", "nok", "uzum"]
+
+// pop — oxiridagini ochirib qaytaradi
+let olingan = mevalar.pop();
+// olingan = "uzum"
+// ["olma", "nok"]
+
+
+================================================
+6. UNSHIFT / SHIFT — BOSHDAN QOSHISH/OCHIRISH
+================================================
+
+let mevalar = ["olma", "nok"];
+
+// unshift — boshiga qoshadi
+mevalar.unshift("uzum");
+// ["uzum", "olma", "nok"]
+
+// shift — boshidagini ochirib qaytaradi
+let olingan = mevalar.shift();
+// olingan = "uzum"
+// ["olma", "nok"]
+
+ESLATMA:
+push/pop    -> OXIR bilan ishlaydi
+unshift/shift -> BOSH bilan ishlaydi
+
+
+================================================
+7. INDEXOF / LASTINDEXOF
+================================================
+
+let mevalar = ["olma", "nok", "olma"];
+
+mevalar.indexOf("olma")      // 0 (birinchi topilgan)
+mevalar.lastIndexOf("olma")  // 2 (oxirgi topilgan)
+mevalar.indexOf("uzum")      // -1 (topilmadi)
+
+
+================================================
+8. INCLUDES — BOR YOKI YOQ
+================================================
+
+let mevalar = ["olma", "nok", "uzum"];
+
+mevalar.includes("nok")   // true
+mevalar.includes("gilos") // false
+
+
+================================================
+9. JOIN — ARRAYNI STRINGGA AYLANTIRISH
+================================================
+
+let mevalar = ["olma", "nok", "uzum"];
+
+mevalar.join(", ")  // "olma, nok, uzum"
+mevalar.join(" - ") // "olma - nok - uzum"
+mevalar.join("")    // "olmanokuzum"
+
+
+================================================
+10. TOSTRING — STRINGGA AYLANTIRISH
+================================================
+
+let mevalar = ["olma", "nok", "uzum"];
+mevalar.toString() // "olma,nok,uzum"
+
+
+================================================
+11. CONCAT — ARRAYLARNI BIRLASHTIRISH
+================================================
+
+let a = ["olma", "nok"];
+let b = ["uzum", "gilos"];
+
+let birga = a.concat(b);
+// ["olma", "nok", "uzum", "gilos"]
+
+// Spread bilan ham mumkin
+let birga2 = [...a, ...b];
+
+
+================================================
+12. SLICE — QISMINI OLISH (ASLGA TEGMAYDI)
+================================================
+
+let mevalar = ["olma", "nok", "uzum", "gilos", "shaftoli"];
+//              0        1      2       3        4
+
+mevalar.slice(1, 3)  // ["nok", "uzum"]
+mevalar.slice(2)     // ["uzum", "gilos", "shaftoli"]
+mevalar.slice(-2)    // ["gilos", "shaftoli"]
+
+MUHIM: slice aslga TEGMAYDI — yangi array qaytaradi ✅
+
+
+================================================
+13. SPLICE — QOSHISH/OCHIRISH (ASLGA TEGADI)
+================================================
+
+let mevalar = ["olma", "nok", "uzum"];
+
+// Ochirish (boshlanish index, nechta ochirish)
+mevalar.splice(1, 1);
+// ["olma", "uzum"]
+
+// Orniga qoshish (index, 0, yangi element)
+mevalar.splice(1, 0, "gilos");
+// ["olma", "gilos", "uzum"]
+
+// Almashtiirish (index, nechta, yangi)
+mevalar.splice(1, 1, "nok");
+// ["olma", "nok", "uzum"]
+
+MUHIM: splice aslga TEGADI — ozgartiradi ⚠️
+
+
+================================================
+14. SORT — SARALASH (ASLGA TEGADI)
+================================================
+
+// Matnlarni saralash
+let mevalar = ["nok", "olma", "uzum"];
+mevalar.sort();
+// ["nok", "olma", "uzum"] — alifbo tartibida
+
+// Sonlarni kichikdan kattaga
+let sonlar = [3, 1, 4, 1, 5, 9];
+sonlar.sort((a, b) => a - b);
+// [1, 1, 3, 4, 5, 9]
+
+// Sonlarni kattadan kichikka
+sonlar.sort((a, b) => b - a);
+// [9, 5, 4, 3, 1, 1]
+
+MUHIM: sort aslga TEGADI ⚠️
+
+
+================================================
+15. REVERSE — TESKARI AYLANTIRISH (ASLGA TEGADI)
+================================================
+
+let mevalar = ["olma", "nok", "uzum"];
+mevalar.reverse();
+// ["uzum", "nok", "olma"]
+
+MUHIM: reverse aslga TEGADI ⚠️
+
+
+================================================
+16. TOSORTED / TOREVERSED — YANGI ARRAY
+================================================
+
+let mevalar = ["nok", "olma", "uzum"];
+
+// toSorted — saralaydi, aslga TEGMAYDI ✅
+let saralangan = mevalar.toSorted();
+console.log(mevalar);    // ["nok", "olma", "uzum"] — ozgarmadi
+console.log(saralangan); // ["nok", "olma", "uzum"] — saralangan
+
+// toReversed — teskari, aslga TEGMAYDI ✅
+let teskari = mevalar.toReversed();
+console.log(mevalar); // ["nok", "olma", "uzum"] — ozgarmadi
+console.log(teskari); // ["uzum", "olma", "nok"]
+
+// toSpliced — splice, aslga TEGMAYDI ✅
+let yangi = mevalar.toSpliced(1, 1, "gilos");
+console.log(mevalar); // ozgarmadi
+console.log(yangi);   // ["nok", "gilos", "uzum"]
+
+FARQ:
+sort()     -> Aslga TEGADI ⚠️
+toSorted() -> Aslga TEGMAYDI ✅
+reverse()     -> Aslga TEGADI ⚠️
+toReversed()  -> Aslga TEGMAYDI ✅
+
+
+================================================
+17. FLAT — ICHMA-ICH ARRAYNI TEKISLASH
+================================================
+
+let arr = [1, 2, [3, 4], [5, 6]];
+arr.flat()
+// [1, 2, 3, 4, 5, 6]
+
+let arr2 = [1, [2, [3, [4]]]];
+arr2.flat(1)        // [1, 2, [3, [4]]]
+arr2.flat(2)        // [1, 2, 3, [4]]
+arr2.flat(Infinity) // [1, 2, 3, 4] — hammasi tekis
+
+
+================================================
+18. FIND / FINDINDEX / FINDLAST / FINDLASTINDEX
+================================================
+
+let sonlar = [1, 2, 3, 4, 5];
+
+// find — birinchi mos ELEMENTNI topadi
+sonlar.find(x => x > 3)          // 4
+
+// findIndex — birinchi mos INDEXNI topadi
+sonlar.findIndex(x => x > 3)     // 3
+
+// findLast — oxirgi mos ELEMENTNI topadi
+sonlar.findLast(x => x > 3)      // 5
+
+// findLastIndex — oxirgi mos INDEXNI topadi
+sonlar.findLastIndex(x => x > 3) // 4
+
+
+================================================
+19. ISARRAY — ARRAY EKANINI TEKSHIRISH
+================================================
+
+Array.isArray([1, 2, 3]) // true
+Array.isArray("salom")   // false
+Array.isArray({a: 1})    // false
+Array.isArray(123)       // false
+
+
+================================================
+20. COPYWITHIN — ICHIDA NUSXA OLISH
+================================================
+
+let arr = [1, 2, 3, 4, 5];
+arr.copyWithin(0, 3);
+// [4, 5, 3, 4, 5]
+// index 3 dan boshlab index 0 ga kochirdi
+
+
+================================================
+21. ITERATION METODLARI
+================================================
+
+let sonlar = [1, 2, 3, 4, 5];
+
+// forEach — har element ustida amal (qaytarmaydi)
+sonlar.forEach(x => console.log(x));
+// 1, 2, 3, 4, 5
+
+// map — har elementni ozgartiradi, yangi array
+sonlar.map(x => x * 2);
+// [2, 4, 6, 8, 10]
+
+// filter — shartga moslarni oladi
+sonlar.filter(x => x > 3);
+// [4, 5]
+
+// reduce — hammasini bitta qiymatga keltiradi
+sonlar.reduce((sum, x) => sum + x, 0);
+// 15
+
+// some — bittasi shart bolsa true
+sonlar.some(x => x > 4);
+// true
+
+// every — hammasi shart bolsa true
+sonlar.every(x => x > 0);
+// true
+
+
+================================================
+ASLGA TEGADIMI — JADVAL
+================================================
+
+Tegadi (mutatsiya):         Tegmaydi (yangi array):
+push()      ⚠️              map()        ✅
+pop()       ⚠️              filter()     ✅
+shift()     ⚠️              slice()      ✅
+unshift()   ⚠️              concat()     ✅
+splice()    ⚠️              toSpliced()  ✅
+sort()      ⚠️              toSorted()   ✅
+reverse()   ⚠️              toReversed() ✅
+copyWithin()⚠️              flat()       ✅
+
+
+================================================
+QISQA ESLATMA — QAYSI METOD NIMA QILADI
+================================================
+
+length          -> Uzunlik
+at(-1)          -> Oxirgi element
+push()          -> Oxiriga qosh
+pop()           -> Oxiridan olib tashla
+unshift()       -> Boshiga qosh
+shift()         -> Boshidan olib tashla
+indexOf()       -> Birinchi indexi
+lastIndexOf()   -> Oxirgi indexi
+includes()      -> Bor yoki yoq
+join()          -> Stringga aylantir
+toString()      -> Stringga aylantir
+concat()        -> Birlashtir
+slice()         -> Qismini ol (tegmaydi)
+splice()        -> Qoshish/ochirish (tegadi)
+sort()          -> Saralash (tegadi)
+reverse()       -> Teskari (tegadi)
+toSorted()      -> Saralash (tegmaydi)
+toReversed()    -> Teskari (tegmaydi)
+flat()          -> Ichma-ichni tekislash
+find()          -> Birinchi mos element
+findIndex()     -> Birinchi mos index
+findLast()      -> Oxirgi mos element
+findLastIndex() -> Oxirgi mos index
+isArray()       -> Array ekanini tekshir
+forEach()       -> Har element ustida amal
+map()           -> Har elementni ozgartir
+filter()        -> Shartga moslarni ol
+reduce()        -> Bitta qiymatga keltir
+some()          -> Bittasi shart bolsa true
+every()         -> Hammasi shart bolsa true
+
+================================================
+
+
+
+
+
+================================================
+JS ARRAY ITERATION — TO'LIQ QOLLANMA
+================================================
+
+
+================================================
+1. forEach — HAR ELEMENT USTIDA AMAL
+================================================
+
+let mevalar = ["olma", "nok", "uzum"];
+
+mevalar.forEach(meva => {
+    console.log(meva);
+});
+// olma
+// nok
+// uzum
+
+// Index ham olish mumkin
+mevalar.forEach((meva, index) => {
+    console.log(index, meva);
+});
+// 0 olma
+// 1 nok
+// 2 uzum
+
+MUHIM: forEach hech narsa QAYTARMAYDI!
+
+
+================================================
+2. map() — HAR ELEMENTNI OZGARTIRADI
+================================================
+
+let sonlar = [1, 2, 3, 4, 5];
+
+let ikkilangan = sonlar.map(son => son * 2);
+// [2, 4, 6, 8, 10]
+
+// Ismlarni katta harfga
+let ismlar = ["ali", "vali", "jasur"];
+ismlar.map(ism => ism.toUpperCase());
+// ["ALI", "VALI", "JASUR"]
+
+// Objectlardan faqat ism olish
+let talabalar = [{ism:"Ali", yosh:20}, {ism:"Vali", yosh:22}];
+talabalar.map(t => t.ism);
+// ["Ali", "Vali"]
+
+MUHIM: map yangi array QAYTARADI, aslga TEGMAYDI ✅
+
+
+================================================
+3. flatMap() — MAP + FLAT BIRGA
+================================================
+
+let arr = [1, 2, 3];
+
+arr.flatMap(x => [x, x * 2]);
+// [1, 2, 2, 4, 3, 6]
+
+// Avval map:  [[1,2], [2,4], [3,6]]
+// Keyin flat: [1, 2, 2, 4, 3, 6]
+
+
+================================================
+4. filter() — SHARTGA MOSLARNI OLADI
+================================================
+
+let sonlar = [1, 2, 3, 4, 5, 6];
+
+// Juft sonlar
+sonlar.filter(son => son % 2 === 0);
+// [2, 4, 6]
+
+// 3 dan katta
+sonlar.filter(son => son > 3);
+// [4, 5, 6]
+
+// Objectlarda filter
+let talabalar = [{ism:"Ali", yosh:20}, {ism:"Vali", yosh:22}];
+talabalar.filter(t => t.yosh > 20);
+// [{ism:"Vali", yosh:22}]
+
+MUHIM: filter yangi array QAYTARADI, aslga TEGMAYDI ✅
+
+
+================================================
+5. reduce() — HAMMASINI BITTA QIYMATGA
+================================================
+
+let sonlar = [1, 2, 3, 4, 5];
+
+let yigindi = sonlar.reduce((sum, son) => sum + son, 0);
+// 15
+
+// Qadam-baqadam:
+// sum=0,  son=1 -> 1
+// sum=1,  son=2 -> 3
+// sum=3,  son=3 -> 6
+// sum=6,  son=4 -> 10
+// sum=10, son=5 -> 15
+
+// Kattasini topish
+sonlar.reduce((max, son) => son > max ? son : max, 0);
+// 5
+
+// Elementlarni sanash
+let mevalar = ["olma", "nok", "olma", "uzum", "olma"];
+mevalar.reduce((hisob, meva) => {
+    hisob[meva] = (hisob[meva] || 0) + 1;
+    return hisob;
+}, {});
+// {olma: 3, nok: 1, uzum: 1}
+
+
+================================================
+6. reduceRight() — ONGDAN CHAPGA REDUCE
+================================================
+
+let harflar = ["a", "b", "c"];
+
+harflar.reduce((s, x) => s + x, "");      // "abc"
+harflar.reduceRight((s, x) => s + x, ""); // "cba"
+
+
+================================================
+7. every() — HAMMASI SHARTGA MOSMI
+================================================
+
+let sonlar = [2, 4, 6, 8];
+
+sonlar.every(x => x % 2 === 0); // true  (hammasi juft)
+sonlar.every(x => x > 5);       // false (hammasi emas)
+
+// Bitta ham shart bajarilmasa — false qaytaradi
+
+
+================================================
+8. some() — BITTASI SHARTGA MOSMI
+================================================
+
+let sonlar = [1, 3, 5, 6, 7];
+
+sonlar.some(x => x % 2 === 0); // true  (6 juft)
+sonlar.some(x => x > 10);      // false (birontasi yoq)
+
+// Bitta bolsa ham shart bajarilsa — true qaytaradi
+
+every vs some:
+every() -> HAMMASI shart bolsa true
+some()  -> BITTASI shart bolsa true
+
+
+================================================
+9. from() — BOSHQA NARSADAN ARRAY YARATISH
+================================================
+
+// Stringdan array
+Array.from("Salom");
+// ["S", "a", "l", "o", "m"]
+
+// Uzunlikdan array
+Array.from({length: 5}, (_, i) => i + 1);
+// [1, 2, 3, 4, 5]
+
+// Set dan array
+Array.from(new Set([1, 2, 2, 3, 3]));
+// [1, 2, 3]
+
+
+================================================
+10. keys() / entries() — INDEX VA ELEMENTLAR
+================================================
+
+let mevalar = ["olma", "nok", "uzum"];
+
+// keys — indexlarni beradi
+for (let i of mevalar.keys()) {
+    console.log(i); // 0, 1, 2
+}
+
+// entries — index va elementni birga
+for (let [i, meva] of mevalar.entries()) {
+    console.log(i, meva);
+    // 0 olma
+    // 1 nok
+    // 2 uzum
+}
+
+
+================================================
+11. with() — ELEMENTNI ALMASHTIRISH (TEGMAYDI)
+================================================
+
+let mevalar = ["olma", "nok", "uzum"];
+
+let yangi = mevalar.with(1, "gilos");
+console.log(mevalar); // ["olma", "nok", "uzum"] — ozgarmadi ✅
+console.log(yangi);   // ["olma", "gilos", "uzum"]
+
+
+================================================
+12. SPREAD (...) — ARRAYNI YOYISH
+================================================
+
+let a = [1, 2, 3];
+let b = [4, 5, 6];
+
+// Birlashtirish
+let birga = [...a, ...b];
+// [1, 2, 3, 4, 5, 6]
+
+// Nusxa olish
+let nusxa = [...a];
+// [1, 2, 3]
+
+// Funksiyaga berish
+Math.max(...a); // 3
+Math.min(...a); // 1
+
+// Boshiga yoki oxiriga element qoshish
+let yangi = [0, ...a, 4];
+// [0, 1, 2, 3, 4]
+
+
+================================================
+13. REST (...) — QOLGANLARINI OLISH
+================================================
+
+let [birinchi, ikkinchi, ...qolganlar] = [1, 2, 3, 4, 5];
+
+birinchi  // 1
+ikkinchi  // 2
+qolganlar // [3, 4, 5]
+
+// Funksiyada rest
+function yigindi(...sonlar) {
+    return sonlar.reduce((s, x) => s + x, 0);
+}
+yigindi(1, 2, 3, 4, 5); // 15
+
+
+================================================
+ITERATION METODLARI — JADVAL
+================================================
+
+forEach()     -> Har element ustida amal (qaytarmaydi)
+map()         -> Har elementni ozgartiradi (yangi array)
+flatMap()     -> map + flat birga
+filter()      -> Shartga moslarni oladi (yangi array)
+reduce()      -> Bitta qiymatga keltiradi
+reduceRight() -> Ongdan chapga reduce
+every()       -> Hammasi shart bolsa true
+some()        -> Bittasi shart bolsa true
+from()        -> Boshqa narsadan array yaratish
+keys()        -> Indexlarni beradi
+entries()     -> Index va elementni birga
+with()        -> Elementni almashtiradi (tegmaydi)
+
+
+================================================
+ARRAY VA OBJECT FARQI
+================================================
+
+ARRAY:
+- Tartibli royxat
+- Index bilan olinadi (arr[0])
+- Bir xil turdagi narsalar
+- [] qavslar bilan yaratiladi
+- length bor
+- map, filter, reduce ishlatiladi
+
+OBJECT:
+- Kalitli malumot
+- Kalit bilan olinadi (obj.ism)
+- Har xil malumotlar
+- {} qavslar bilan yaratiladi
+- Object.keys, values, entries
+
+QACHON ARRAY ISHLATISH:
+- Royxatlar: ["Ali", "Vali", "Jasur"]
+- Baholar:   [5, 4, 3, 5]
+- Mevalar:   ["olma", "nok"]
+
+QACHON OBJECT ISHLATISH:
+- Bitta narsaning maumotlari:
+  {ism: "Ali", yosh: 20, baho: 5}
+
+IKKALASI BIRGA (ENG KOP ISHLATILADI):
+let talabalar = [
+    {ism: "Ali",   yosh: 20},
+    {ism: "Vali",  yosh: 22},
+    {ism: "Jasur", yosh: 21}
+];
+
+// Barcha ismlarni olish
+talabalar.map(t => t.ism);
+// ["Ali", "Vali", "Jasur"]
+
+// 21 dan katta talabalar
+talabalar.filter(t => t.yosh > 21);
+// [{ism:"Vali", yosh:22}]
+
+// Yosh yigindisi
+talabalar.reduce((sum, t) => sum + t.yosh, 0);
+// 63
+
+
+================================================
+QISQA ESLATMA
+================================================
+
+forEach  -> Har element ustida ishlash (qaytarmaydi)
+map      -> Ozgartir, yangi array ol
+flatMap  -> map + flat
+filter   -> Shartga moslarni ol
+reduce   -> Bitta qiymatga keltir
+every    -> Hammasi mos -> true
+some     -> Bittasi mos -> true
+from     -> Boshqa narsadan array
+Spread   -> [...arr] yoy yoki birlashtir
+Rest     -> [...qolganlar] qolganlarini ol
+
+================================================
+
+
+
+================================================
+JS SET — TO'LIQ QOLLANMA
+================================================
+
+SET NIMA?
+----------
+Set — takrorlanmas qiymatlar toplami.
+Har bir qiymat faqat BIR MARTA boladi.
+
+Tasavvur: royxatga yozilgan mehmonlar!
+Bir kishi ikki marta yozilmaydi.
+
+Array vs Set:
+- Array -> [1, 2, 2, 3] — takror bolishi mumkin
+- Set   -> {1, 2, 3}    — takror BOLMAYDI
+
+
+================================================
+1. SET YARATISH
+================================================
+
+// Bosh set
+let set = new Set();
+
+// Qiymatlar bilan
+let set2 = new Set([1, 2, 3]);
+// {1, 2, 3}
+
+// Takrorlar avtomatik ochiriladi
+let set3 = new Set([1, 2, 2, 3, 3, 3]);
+// {1, 2, 3}
+
+
+================================================
+2. ASOSIY METODLAR
+================================================
+
+let set = new Set();
+
+// add() — qoshish
+set.add("olma");
+set.add("nok");
+set.add("uzum");
+set.add("olma"); // takror — qoshilmaydi!
+// {"olma", "nok", "uzum"}
+
+// has() — bor yoki yoq
+set.has("olma"); // true
+set.has("gilos"); // false
+
+// delete() — ochirish
+set.delete("nok");
+// {"olma", "uzum"}
+
+// size — uzunlik (length emas!)
+set.size; // 2
+
+// clear() — hammasini tozalash
+set.clear();
+// {}
+
+
+================================================
+3. ENG KOP ISHLATILISHI — TAKRORLARNI OCHIRISH
+================================================
+
+let sonlar = [1, 2, 2, 3, 3, 3, 4];
+
+// Set ga aylantir, keyin arrayga qaytart
+let yagona = [...new Set(sonlar)];
+// [1, 2, 3, 4]
+
+// Ismlar royxatidan takrorlarni ochirish
+let ismlar = ["Ali", "Vali", "Ali", "Jasur", "Vali"];
+let yagonaIsmlar = [...new Set(ismlar)];
+// ["Ali", "Vali", "Jasur"]
+
+
+================================================
+4. SET BOYLAB AYLANISH
+================================================
+
+let set = new Set(["olma", "nok", "uzum"]);
+
+// for...of bilan
+for (let meva of set) {
+    console.log(meva);
+}
+// olma, nok, uzum
+
+// forEach bilan
+set.forEach(meva => {
+    console.log(meva);
+});
+
+
+================================================
+5. SET VA ARRAY AYLANTIRISH
+================================================
+
+// Arraydan Set
+let arr = [1, 2, 2, 3];
+let set = new Set(arr);
+// {1, 2, 3}
+
+// Setdan Array
+let arr2 = [...set];
+// [1, 2, 3]
+
+// Yoki
+let arr3 = Array.from(set);
+// [1, 2, 3]
+
+
+================================================
+6. AMALIY MISOLLAR
+================================================
+
+// Ikki arrayning umumiy elementlari
+let a = new Set([1, 2, 3, 4]);
+let b = new Set([3, 4, 5, 6]);
+
+let umumiy = [...a].filter(x => b.has(x));
+// [3, 4]
+
+// Ikki arrayni birlashtirish (takrorsiz)
+let birga = new Set([...a, ...b]);
+// {1, 2, 3, 4, 5, 6}
+
+// Faqat birida bor elementlar
+let faqatA = [...a].filter(x => !b.has(x));
+// [1, 2]
+
+
+================================================
+ARRAY VS SET — JADVAL
+================================================
+
+                Array       Set
+Yaratish:       []          new Set()
+Qoshish:        push()      add()
+Ochirish:       splice()    delete()
+Tekshirish:     includes()  has()
+Uzunlik:        length      size
+Takror:         Mumkin      Mumkin emas
+Tartib:         Bor         Bor (qoshish tartibi)
+
+
+================================================
+QISQA ESLATMA
+================================================
+
+new Set()        -> Yangi set yaratish
+new Set([...])   -> Arraydan set
+set.add(x)       -> Qoshish
+set.has(x)       -> Bor yoki yoq
+set.delete(x)    -> Ochirish
+set.size         -> Uzunlik
+set.clear()      -> Hammasini tozalash
+[...set]         -> Setdan arrayga
+
+ENG MUHIM ISHLATILISHI:
+[...new Set(arr)] -> Arraydan takrorlarni ochirish ✅
+
+================================================
+
+
+================================================
+JS MATH — TO'LIQ QOLLANMA
+================================================
+
+MATH NIMA?
+-----------
+Math — JS da matematik hisob-kitoblar uchun
+tayyor metodlar toplami.
+
+Tasavvur: kalkulyator!
+Yumaloqlash, ildiz, daraja — hammasi tayyor.
+
+
+================================================
+1. MATH KONSTANTALARI
+================================================
+
+Math.PI  // 3.141592653589793 — doira soni
+Math.E   // 2.718281828459045 — Eyler soni
+
+
+================================================
+2. YUMALOQLASH
+================================================
+
+Math.round(4.5)  // 5  — oddiy yumaloqlash (0.5 dan yuqori -> yuqori)
+Math.round(4.4)  // 4
+
+Math.ceil(4.1)   // 5  — YUQORIGA yumaloqlash (har doim yuqori)
+Math.ceil(4.9)   // 5
+Math.ceil(-4.1)  // -4
+
+Math.floor(4.9)  // 4  — PASTGA yumaloqlash (har doim past)
+Math.floor(4.1)  // 4
+Math.floor(-4.1) // -5
+
+Math.trunc(4.9)  // 4  — Kasr qismini kesib tashlash
+Math.trunc(-4.9) // -4
+
+FARQ:
+round  -> 0.5 dan yuqori bolsa yuqoriga, aks holda pastga
+ceil   -> HAR DOIM yuqoriga
+floor  -> HAR DOIM pastga
+trunc  -> Kasr qismini kesib tashla
+
+
+================================================
+3. KATTA / KICHIK
+================================================
+
+Math.max(1, 5, 3, 9, 2) // 9 — eng kattasi
+Math.min(1, 5, 3, 9, 2) // 1 — eng kichigi
+
+// Array bilan (spread ishlatiladi)
+let sonlar = [1, 5, 3, 9, 2];
+Math.max(...sonlar) // 9
+Math.min(...sonlar) // 1
+
+
+================================================
+4. MUTLAQ QIYMAT
+================================================
+
+Math.abs(-5)  // 5 — manfiy bolsa musbatga
+Math.abs(5)   // 5
+Math.abs(-99) // 99
+
+// Ishlatilishi: ikki son orasidagi farq
+Math.abs(10 - 15) // 5
+
+
+================================================
+5. DARAJA VA ILDIZ
+================================================
+
+// pow — daraja
+Math.pow(2, 3)  // 8  — 2 ning 3-darajasi (2*2*2)
+Math.pow(3, 2)  // 9  — 3 ning 2-darajasi (3*3)
+Math.pow(5, 0)  // 1  — har qanday son 0-darajasi = 1
+
+// sqrt — kvadrat ildiz
+Math.sqrt(9)    // 3
+Math.sqrt(16)   // 4
+Math.sqrt(25)   // 5
+
+// cbrt — kub ildiz
+Math.cbrt(27)   // 3
+Math.cbrt(8)    // 2
+
+
+================================================
+6. RANDOM — TASODIFIY SON
+================================================
+
+Math.random()
+// 0 dan 1 gacha (1 kirmaydi)
+// 0.7823645...
+
+// 0 dan 9 gacha (butun son)
+Math.floor(Math.random() * 10)
+
+// 1 dan 10 gacha
+Math.floor(Math.random() * 10) + 1
+
+// 1 dan 100 gacha
+Math.floor(Math.random() * 100) + 1
+
+// MIN dan MAX gacha (universal formula)
+function randomSon(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+randomSon(5, 15) // 5 dan 15 gacha tasodifiy son
+
+
+================================================
+7. SIGN — ISHORASI
+================================================
+
+Math.sign(-5) // -1 — manfiy
+Math.sign(0)  //  0 — nol
+Math.sign(5)  //  1 — musbat
+
+
+================================================
+8. LOGARIFM
+================================================
+
+Math.log(1)     // 0
+Math.log2(8)    // 3  — 2 asosli logarifm
+Math.log10(100) // 2  — 10 asosli logarifm
+Math.log10(1000)// 3
+
+
+================================================
+9. AMALIY MISOLLAR
+================================================
+
+// Narxni yumaloqlash
+let narx = 19.567;
+Math.round(narx * 100) / 100 // 19.57
+
+// Foiz hisoblash
+let summa = 1000;
+let foiz  = 15;
+let natija = summa * foiz / 100; // 150
+
+// Doira yuzi
+let radius = 5;
+let yuza = Math.PI * Math.pow(radius, 2);
+// 78.53...
+
+// Tasodifiy rang
+let r = Math.floor(Math.random() * 256);
+let g = Math.floor(Math.random() * 256);
+let b = Math.floor(Math.random() * 256);
+// rgb(r, g, b)
+
+
+================================================
+QISQA ESLATMA — JADVAL
+================================================
+
+YUMALOQLASH:
+Math.round()   -> Oddiy yumaloqlash
+Math.ceil()    -> Yuqoriga yumaloqlash
+Math.floor()   -> Pastga yumaloqlash
+Math.trunc()   -> Kasr qismini kesish
+
+KATTA/KICHIK:
+Math.max()     -> Eng kattasi
+Math.min()     -> Eng kichigi
+
+DARAJA/ILDIZ:
+Math.pow(x,y)  -> x ning y-darajasi
+Math.sqrt(x)   -> Kvadrat ildiz
+Math.cbrt(x)   -> Kub ildiz
+Math.abs(x)    -> Mutlaq qiymat
+
+BOSHQALAR:
+Math.random()  -> 0 dan 1 gacha tasodifiy
+Math.sign(x)   -> Ishorasi (-1, 0, 1)
+Math.log2(x)   -> 2 asosli logarifm
+Math.log10(x)  -> 10 asosli logarifm
+Math.PI        -> 3.14159...
+
+================================================
+
+
+
+
+
