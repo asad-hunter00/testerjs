@@ -120,10 +120,6 @@ h1 {
 
 
 
-
-
-
-
 #area {
     width: 100%;
     min-height: 120px;
@@ -141,3 +137,9 @@ h1 {
     box-shadow: 0 0 0 2px #444;
 }
 
+
+
+
+#edit {
+    background: #444;
+}
