@@ -1,4 +1,4 @@
-// boshlang‘ich data
+
 let data = {
     users: [
         {
@@ -6,7 +6,7 @@ let data = {
             name: "Ali",
             age: 18,
             todos: [
-                { id: 1, text: "Dars", done: false },
+                { id: 1, text: "lesson", done: false },
                 { id: 2, text: "Sport", done: true }
             ]
         },
@@ -15,8 +15,8 @@ let data = {
             name: "Vali",
             age: 20,
             todos: [
-                { id: 3, text: "Kitob", done: false },
-                { id: 4, text: "Ish", done: true }
+                { id: 3, text: "books", done: false },
+                { id: 4, text: "work", done: true }
             ]
         },
         {
@@ -24,8 +24,8 @@ let data = {
             name: "Sardor",
             age: 19,
             todos: [
-                { id: 5, text: "Kod yozish", done: false },
-                { id: 6, text: "Video ko‘rish", done: true }
+                { id: 5, text: "write code", done: false },
+                { id: 6, text: "watch video", done: true }
             ]
         }
     ]
@@ -34,16 +34,20 @@ let data = {
 let list = document.getElementById("list");
 
 function Output() {
-    let data = JSON.parse(localStorage.getItem("data")) || { users: [] };
+    let data = JSON.parse(localStorage.getItem("data"));
 
     list.innerHTML = "";
-
     for (let i = 0; i < data.users.length; i++) {
         let user = data.users[i];
 
-        let li = document.createElement("li");
-        li.textContent = user.name + " (" + user.age + ")";
+       let a =  document.createElement("li")
 
-        list.appendChild(li);
+        a.textContent = "test";
+
+
+
     }
+
+
 }
+
